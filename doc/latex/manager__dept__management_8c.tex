@@ -1,0 +1,86 @@
+\hypertarget{manager__dept__management_8c}{}\doxysection{manager\+\_\+dept\+\_\+management.\+c File Reference}
+\label{manager__dept__management_8c}\index{manager\_dept\_management.c@{manager\_dept\_management.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for manager\+\_\+dept\+\_\+management.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{manager__dept__management_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{manager__dept__management_8c_ae8c81b2934a1bb430c61fa11b6de04c9}{employee\+\_\+request}} (int emp\+\_\+id, char dept\mbox{[}$\,$\mbox{]}, char designation\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Employee request for the department by the manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{manager__dept__management_8c_a4796506781fac42780087bbdf10799cf}{connect4}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{manager__dept__management_8c_aa23116bcb475bb515efb22522dbc7a78}{connect5}}
+\item 
+int \mbox{\hyperlink{manager__dept__management_8c_a63c89c04d1feae07ca35558055155ffb}{port}} =3306
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Perform the employee request functionality for the manager in his department. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{manager__dept__management_8c_ae8c81b2934a1bb430c61fa11b6de04c9}\label{manager__dept__management_8c_ae8c81b2934a1bb430c61fa11b6de04c9}} 
+\index{manager\_dept\_management.c@{manager\_dept\_management.c}!employee\_request@{employee\_request}}
+\index{employee\_request@{employee\_request}!manager\_dept\_management.c@{manager\_dept\_management.c}}
+\doxysubsubsection{\texorpdfstring{employee\_request()}{employee\_request()}}
+{\footnotesize\ttfamily char $\ast$ employee\+\_\+request (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id,  }\item[{char}]{dept\mbox{[}$\,$\mbox{]},  }\item[{char}]{designation\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Employee request for the department by the manager. 
+
+Manager can request for an employee in his department at the specified designation The status will be approved when admin gives the approval permission The employee will be added using recruitment process
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & emp\+\_\+id Employee ID of the manager requesting an employee \\
+\hline
+\mbox{\texttt{ in}}  & {\em char} & dept\mbox{[}\mbox{]} Department of the manager in which employee is required \\
+\hline
+\mbox{\texttt{ in}}  & {\em char} & designation\mbox{[}\mbox{]} Designation at which employee required by the manager\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string message for employee request status 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{manager__dept__management_8c_ae8c81b2934a1bb430c61fa11b6de04c9_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{manager__dept__management_8c_a4796506781fac42780087bbdf10799cf}\label{manager__dept__management_8c_a4796506781fac42780087bbdf10799cf}} 
+\index{manager\_dept\_management.c@{manager\_dept\_management.c}!connect4@{connect4}}
+\index{connect4@{connect4}!manager\_dept\_management.c@{manager\_dept\_management.c}}
+\doxysubsubsection{\texorpdfstring{connect4}{connect4}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ connect4}
+
+\mbox{\Hypertarget{manager__dept__management_8c_aa23116bcb475bb515efb22522dbc7a78}\label{manager__dept__management_8c_aa23116bcb475bb515efb22522dbc7a78}} 
+\index{manager\_dept\_management.c@{manager\_dept\_management.c}!connect5@{connect5}}
+\index{connect5@{connect5}!manager\_dept\_management.c@{manager\_dept\_management.c}}
+\doxysubsubsection{\texorpdfstring{connect5}{connect5}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ connect5}
+
+\mbox{\Hypertarget{manager__dept__management_8c_a63c89c04d1feae07ca35558055155ffb}\label{manager__dept__management_8c_a63c89c04d1feae07ca35558055155ffb}} 
+\index{manager\_dept\_management.c@{manager\_dept\_management.c}!port@{port}}
+\index{port@{port}!manager\_dept\_management.c@{manager\_dept\_management.c}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily int port =3306}
+

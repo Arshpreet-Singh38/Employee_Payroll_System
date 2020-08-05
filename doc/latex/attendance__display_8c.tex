@@ -1,0 +1,120 @@
+\hypertarget{attendance__display_8c}{}\doxysection{attendance\+\_\+display.\+c File Reference}
+\label{attendance__display_8c}\index{attendance\_display.c@{attendance\_display.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}validation.\+h\char`\"{}}\newline
+Include dependency graph for attendance\+\_\+display.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{attendance__display_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{attendance__display_8c_a2e8b07ee7dce7c31811c48724124be9e}{hourly\+\_\+view\+\_\+attendance}} (int emp\+\_\+id)
+\begin{DoxyCompactList}\small\item\em View the attendance for hourly employees. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{attendance__display_8c_a0fee0bbf0bd0dabdb34a069d8249583a}{view\+\_\+attendance}} (int emp\+\_\+id)
+\begin{DoxyCompactList}\small\item\em View the attendance for salaried employees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{attendance__display_8c_a77b2471da3d30f191c4326a537474a58}{conn10}}
+\item 
+int \mbox{\hyperlink{attendance__display_8c_ad5307e34881545de1b0e6b447e850897}{port3}} =3306
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Perform the Admin duties for viewing the attendance from this file 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{attendance__display_8c_a2e8b07ee7dce7c31811c48724124be9e}\label{attendance__display_8c_a2e8b07ee7dce7c31811c48724124be9e}} 
+\index{attendance\_display.c@{attendance\_display.c}!hourly\_view\_attendance@{hourly\_view\_attendance}}
+\index{hourly\_view\_attendance@{hourly\_view\_attendance}!attendance\_display.c@{attendance\_display.c}}
+\doxysubsubsection{\texorpdfstring{hourly\_view\_attendance()}{hourly\_view\_attendance()}}
+{\footnotesize\ttfamily void hourly\+\_\+view\+\_\+attendance (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+View the attendance for hourly employees. 
+
+Accessing the database to view the attendance from daily\+\_\+attendance table for hourly employees Admin can access for all users but employee and manager can access for own only.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & emp\+\_\+id Integer value of the user Employee ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing as the function is printing messages on the console screen 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{attendance__display_8c_a2e8b07ee7dce7c31811c48724124be9e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{attendance__display_8c_a2e8b07ee7dce7c31811c48724124be9e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{attendance__display_8c_a0fee0bbf0bd0dabdb34a069d8249583a}\label{attendance__display_8c_a0fee0bbf0bd0dabdb34a069d8249583a}} 
+\index{attendance\_display.c@{attendance\_display.c}!view\_attendance@{view\_attendance}}
+\index{view\_attendance@{view\_attendance}!attendance\_display.c@{attendance\_display.c}}
+\doxysubsubsection{\texorpdfstring{view\_attendance()}{view\_attendance()}}
+{\footnotesize\ttfamily void view\+\_\+attendance (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+View the attendance for salaried employees. 
+
+Accessing the database to view the attendance from daily\+\_\+attendance table for salaried employees Admin can access for all users but employee and manager can access for own only.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & emp\+\_\+id Integer value of the user Employee ID\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing as the function is printing messages on the console screen 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{attendance__display_8c_a0fee0bbf0bd0dabdb34a069d8249583a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{attendance__display_8c_a0fee0bbf0bd0dabdb34a069d8249583a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{attendance__display_8c_a77b2471da3d30f191c4326a537474a58}\label{attendance__display_8c_a77b2471da3d30f191c4326a537474a58}} 
+\index{attendance\_display.c@{attendance\_display.c}!conn10@{conn10}}
+\index{conn10@{conn10}!attendance\_display.c@{attendance\_display.c}}
+\doxysubsubsection{\texorpdfstring{conn10}{conn10}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ conn10}
+
+\mbox{\Hypertarget{attendance__display_8c_ad5307e34881545de1b0e6b447e850897}\label{attendance__display_8c_ad5307e34881545de1b0e6b447e850897}} 
+\index{attendance\_display.c@{attendance\_display.c}!port3@{port3}}
+\index{port3@{port3}!attendance\_display.c@{attendance\_display.c}}
+\doxysubsubsection{\texorpdfstring{port3}{port3}}
+{\footnotesize\ttfamily int port3 =3306}
+

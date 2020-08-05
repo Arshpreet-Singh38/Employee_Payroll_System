@@ -1,0 +1,7 @@
+<map id="update_attendance" name="update_attendance">
+<area shape="rect" id="node1" title="Update the attendance of the user." alt="" coords="5,56,137,83"/>
+<area shape="rect" id="node2" href="$_validation_8c.html#a98f7cea390f8c27a349f27fa8374956e" title="Validating the attendance." alt="" coords="185,31,321,57"/>
+<area shape="rect" id="node5" href="$_validation_8c.html#aad0e0d513f76295005bffda6a837e8ca" title="Validating the current date." alt="" coords="205,81,302,108"/>
+<area shape="rect" id="node3" href="$_validation_8c.html#a11758def6b67ad1ce202168f84bcf7b8" title="check the availability of leaves in the database for the particular year" alt="" coords="369,5,463,32"/>
+<area shape="rect" id="node4" href="$_validation_8c.html#acdfc0f8ee81107535c88f945cbfeb305" title="Removes the extra spacing." alt="" coords="392,56,440,83"/>
+</map>

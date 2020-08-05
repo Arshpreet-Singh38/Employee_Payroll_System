@@ -1,0 +1,246 @@
+\hypertarget{admin__attend__mgmt_8c}{}\doxysection{admin\+\_\+attend\+\_\+mgmt.\+c File Reference}
+\label{admin__attend__mgmt_8c}\index{admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}validation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}attendance\+\_\+display.\+h\char`\"{}}\newline
+Include dependency graph for admin\+\_\+attend\+\_\+mgmt.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__attend__mgmt_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{admin__attend__mgmt_8c_a4757b9e47ec9662432e9b196d85026dc}{attendance\+\_\+month\+\_\+availability}} (int mm, int yy)
+\begin{DoxyCompactList}\small\item\em Month availability before inserting attendance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin__attend__mgmt_8c_a05be99a37dcbc824a657fe08afa55a10}{update\+\_\+attendance}} ()
+\begin{DoxyCompactList}\small\item\em Update the attendance of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin__attend__mgmt_8c_ac138eba1507443b2ad38f5046d24f7f3}{add\+\_\+attendance}} ()
+\begin{DoxyCompactList}\small\item\em Add the attendance of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin__attend__mgmt_8c_a3b91fdefb5f5cdf7e785feeb24c843a5}{hourly\+\_\+attendance}} ()
+\begin{DoxyCompactList}\small\item\em Add the attendance of the employees. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin__attend__mgmt_8c_ac954558374aa1d041896a8d6ad7fb617}{new\+\_\+month}} ()
+\begin{DoxyCompactList}\small\item\em Add the new\+\_\+month for attendance of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin__attend__mgmt_8c_a64e2f6fc2f36c6e5247282142943406d}{attend\+\_\+mgmt}} (int ch)
+\begin{DoxyCompactList}\small\item\em Attendance Management and calls the function from this function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{admin__attend__mgmt_8c_a991145e8a6fd5c49e651c32546942cf3}{conn4}}
+\item 
+int \mbox{\hyperlink{admin__attend__mgmt_8c_a9e258c73506ef3d20d1046dea04c2edd}{port1}} =3306
+\item 
+char \mbox{\hyperlink{admin__attend__mgmt_8c_a5cc3ea59fa1a54853f37025dcf53f83d}{query}} \mbox{[}1500\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Admin duties related to attendance management are performed in this file 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{admin__attend__mgmt_8c_ac138eba1507443b2ad38f5046d24f7f3}\label{admin__attend__mgmt_8c_ac138eba1507443b2ad38f5046d24f7f3}} 
+\index{admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}!add\_attendance@{add\_attendance}}
+\index{add\_attendance@{add\_attendance}!admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}}
+\doxysubsubsection{\texorpdfstring{add\_attendance()}{add\_attendance()}}
+{\footnotesize\ttfamily void add\+\_\+attendance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Add the attendance of the user. 
+
+Admin will add the attendance for the new month from the csv (comma separated version) file named My\+File.\+csv
+
+\begin{DoxyReturn}{Returns}
+Nothing as the function is printing the message on the console screen 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__attend__mgmt_8c_ac138eba1507443b2ad38f5046d24f7f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__attend__mgmt_8c_ac138eba1507443b2ad38f5046d24f7f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{admin__attend__mgmt_8c_a64e2f6fc2f36c6e5247282142943406d}\label{admin__attend__mgmt_8c_a64e2f6fc2f36c6e5247282142943406d}} 
+\index{admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}!attend\_mgmt@{attend\_mgmt}}
+\index{attend\_mgmt@{attend\_mgmt}!admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}}
+\doxysubsubsection{\texorpdfstring{attend\_mgmt()}{attend\_mgmt()}}
+{\footnotesize\ttfamily void attend\+\_\+mgmt (\begin{DoxyParamCaption}\item[{int}]{ch }\end{DoxyParamCaption})}
+
+
+
+Attendance Management and calls the function from this function. 
+
+Admin will call the functions from this main function after establishing the connection
+
+param\mbox{[}in\mbox{]} int ch Input integer value given by the admin
+
+\begin{DoxyReturn}{Returns}
+Nothing as the function is printing the message on the console screen 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__attend__mgmt_8c_a64e2f6fc2f36c6e5247282142943406d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__attend__mgmt_8c_a64e2f6fc2f36c6e5247282142943406d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{admin__attend__mgmt_8c_a4757b9e47ec9662432e9b196d85026dc}\label{admin__attend__mgmt_8c_a4757b9e47ec9662432e9b196d85026dc}} 
+\index{admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}!attendance\_month\_availability@{attendance\_month\_availability}}
+\index{attendance\_month\_availability@{attendance\_month\_availability}!admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}}
+\doxysubsubsection{\texorpdfstring{attendance\_month\_availability()}{attendance\_month\_availability()}}
+{\footnotesize\ttfamily int attendance\+\_\+month\+\_\+availability (\begin{DoxyParamCaption}\item[{int}]{mm,  }\item[{int}]{yy }\end{DoxyParamCaption})}
+
+
+
+Month availability before inserting attendance. 
+
+Check the new month is created / recorded in the database for the attendance
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & mm Integer month value from the user \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & yy Integer year value from the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: 0\+: For false Case or Error 1\+: Positive Response 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__attend__mgmt_8c_a4757b9e47ec9662432e9b196d85026dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{admin__attend__mgmt_8c_a3b91fdefb5f5cdf7e785feeb24c843a5}\label{admin__attend__mgmt_8c_a3b91fdefb5f5cdf7e785feeb24c843a5}} 
+\index{admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}!hourly\_attendance@{hourly\_attendance}}
+\index{hourly\_attendance@{hourly\_attendance}!admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}}
+\doxysubsubsection{\texorpdfstring{hourly\_attendance()}{hourly\_attendance()}}
+{\footnotesize\ttfamily void hourly\+\_\+attendance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Add the attendance of the employees. 
+
+Admin will add the attendance for the new month from the csv (comma separated version) file named Attend.\+csv Hourly based employees attendance is added from this file
+
+\begin{DoxyReturn}{Returns}
+Nothing as the function is printing the message on the console screen 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{admin__attend__mgmt_8c_a3b91fdefb5f5cdf7e785feeb24c843a5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__attend__mgmt_8c_a3b91fdefb5f5cdf7e785feeb24c843a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{admin__attend__mgmt_8c_ac954558374aa1d041896a8d6ad7fb617}\label{admin__attend__mgmt_8c_ac954558374aa1d041896a8d6ad7fb617}} 
+\index{admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}!new\_month@{new\_month}}
+\index{new\_month@{new\_month}!admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}}
+\doxysubsubsection{\texorpdfstring{new\_month()}{new\_month()}}
+{\footnotesize\ttfamily void new\+\_\+month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Add the new\+\_\+month for attendance of the user. 
+
+Admin will add the new\+\_\+month for attendance in the database
+
+\begin{DoxyReturn}{Returns}
+Nothing as the function is printing the message on the console screen 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{admin__attend__mgmt_8c_ac954558374aa1d041896a8d6ad7fb617_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__attend__mgmt_8c_ac954558374aa1d041896a8d6ad7fb617_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{admin__attend__mgmt_8c_a05be99a37dcbc824a657fe08afa55a10}\label{admin__attend__mgmt_8c_a05be99a37dcbc824a657fe08afa55a10}} 
+\index{admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}!update\_attendance@{update\_attendance}}
+\index{update\_attendance@{update\_attendance}!admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}}
+\doxysubsubsection{\texorpdfstring{update\_attendance()}{update\_attendance()}}
+{\footnotesize\ttfamily void update\+\_\+attendance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the attendance of the user. 
+
+Admin will update the attendance, if any requests have been generated by the user
+
+\begin{DoxyReturn}{Returns}
+Nothing as the function is printing the message on the console screen 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__attend__mgmt_8c_a05be99a37dcbc824a657fe08afa55a10_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__attend__mgmt_8c_a05be99a37dcbc824a657fe08afa55a10_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{admin__attend__mgmt_8c_a991145e8a6fd5c49e651c32546942cf3}\label{admin__attend__mgmt_8c_a991145e8a6fd5c49e651c32546942cf3}} 
+\index{admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}!conn4@{conn4}}
+\index{conn4@{conn4}!admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}}
+\doxysubsubsection{\texorpdfstring{conn4}{conn4}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ conn4}
+
+\mbox{\Hypertarget{admin__attend__mgmt_8c_a9e258c73506ef3d20d1046dea04c2edd}\label{admin__attend__mgmt_8c_a9e258c73506ef3d20d1046dea04c2edd}} 
+\index{admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}!port1@{port1}}
+\index{port1@{port1}!admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}}
+\doxysubsubsection{\texorpdfstring{port1}{port1}}
+{\footnotesize\ttfamily int port1 =3306}
+
+\mbox{\Hypertarget{admin__attend__mgmt_8c_a5cc3ea59fa1a54853f37025dcf53f83d}\label{admin__attend__mgmt_8c_a5cc3ea59fa1a54853f37025dcf53f83d}} 
+\index{admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}!query@{query}}
+\index{query@{query}!admin\_attend\_mgmt.c@{admin\_attend\_mgmt.c}}
+\doxysubsubsection{\texorpdfstring{query}{query}}
+{\footnotesize\ttfamily char query\mbox{[}1500\mbox{]}}
+

@@ -1,0 +1,13 @@
+<map id="hourly_view_attendance" name="hourly_view_attendance">
+<area shape="rect" id="node1" title="View the attendance for hourly employees." alt="" coords="1033,193,1192,219"/>
+<area shape="rect" id="node2" href="$admin__attend__mgmt_8c.html#a64e2f6fc2f36c6e5247282142943406d" title="Attendance Management and calls the function from this function." alt="" coords="680,218,779,245"/>
+<area shape="rect" id="node5" href="$employee__attdnce__management_8c.html#a974d072803a1ac834a7031b4eb6b33cc" title="attendance management takes 1 argument." alt="" coords="827,167,985,194"/>
+<area shape="rect" id="node3" href="$employee__management_8c.html#a456f09d016ff1aa94f56b7465f5f5400" title=" " alt="" coords="104,193,233,219"/>
+<area shape="rect" id="node4" href="$_main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function which distributes various tasks to other functions." alt="" coords="5,41,56,67"/>
+<area shape="rect" id="node6" href="$employee_8c.html#a2b298dd5c9c227ae010b9a65fec71715" title="Basically call the function from this main function." alt="" coords="690,142,769,169"/>
+<area shape="rect" id="node7" href="$employee__management_8c.html#a4deff038da64e7ead8470e2871dff128" title="Allows the admin to add a new employee in the database." alt="" coords="517,167,623,194"/>
+<area shape="rect" id="node9" href="$employee__management_8c.html#a5661239612b41efda60e01c330de8145" title="Allows the admin to modify employee details." alt="" coords="309,243,432,270"/>
+<area shape="rect" id="node10" href="$employee__personal__dtl__management_8c.html#a6347d64cacde5357741c209f6e4ab82e" title="Access the database for their details to be modified by the employee." alt="" coords="508,66,632,93"/>
+<area shape="rect" id="node8" href="$admin__dept__management_8c.html#a2e41248091dce857522c62f5c365d035" title="Add the employees by the admin in the department as requested in the employee request by manager." alt="" coords="281,193,460,219"/>
+<area shape="rect" id="node11" href="$employee__personal__dtl__management_8c.html#aab11849fbd26ca8ce98aabc04a1b8f08" title="Create connection and basically calls the function from here." alt="" coords="308,91,433,118"/>
+</map>

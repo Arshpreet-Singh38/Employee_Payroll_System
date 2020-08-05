@@ -1,0 +1,467 @@
+*********************************TEST 1 for Login**********************************************
+***********************************TEST 1A*****************************************************
+We are first going to login using correct credentials for Admin i.e. Userid=1 and password=1234
+Expected result is it should return string admin
+ 
+
+PASSED
+
+
+***********************************TEST 1B****************************************************
+We are going to login using incorrect password Userid=1 and password=1233
+Expected result is it should return string Wrong username or password
+ 
+
+PASSED
+
+
+***********************************TEST 1C****************************************************
+We are going to login using incorrect username Userid=999 and password=1233
+Expected result is it should return string Wrong username or password
+ 
+
+PASSED
+
+
+***********************************TEST 1D****************************************************
+We are going to login using Inactive user credentials i.e UserId=3 and Password=1234
+Expected result is it should return string User is deactivated
+ 
+
+PASSED
+
+
+*******************************TEST 2 for change_password*****************************************
+***********************************TEST 2A*****************************************************
+Change_password accepts 4 parameters i.e. userid,old password , new password , confirm new password
+In first case we are going to input correct credentials, it should return string Password updated
+
+
+PASSED
+
+
+***********************************TEST 2B*****************************************************
+In second case we are going to input incorrect old password, it should return string Old password wrong
+
+
+PASSED
+
+
+***********************************TEST 2C*****************************************************
+In second case we are going to input incorrect new password, it should return string re-enter new password
+
+
+PASSED
+
+
+
+
+
+
+*********************************TEST 3 for attendance change request**********************************************
+***********************************TEST 3A*****************************************************
+We are first going to raise a request with wrong date 123/123/1243 and a random description
+Expected result is it should return Invalid date format
+ 
+
+PASSED
+
+
+
+
+***********************************TEST 3B*****************************************************
+Function call with a description with more than 150 character
+Expected result is it should return Description must not be greater than 150 characters 'C is a procedural programming language. It was initially developed by Dennis Ritchie in the year 1972. It was mainly developed as a system programming language to write an operating system' 
+ 
+
+PASSED
+
+
+
+
+***********************************TEST 3C*****************************************************
+Function call without employee id 
+Expected result is it should return Employee not exists
+ 
+
+PASSED
+
+
+
+
+***********************************TEST 3D*****************************************************
+Function call with a correct parameters empID=2, date= 17/04/2020 and description='change Absent with ML'
+Expected result is it should return Request submitted
+ 
+
+PASSED
+
+
+
+
+
+
+*********************************TEST 4 for employee deactivation**********************************************
+***********************************TEST 4A*****************************************************
+We are first going to raise a request with a wrong emp_id to deactivate
+Expected result is it should return Employee does not exists
+ 
+
+PASSED
+
+
+***********************************TEST 4B*****************************************************
+Now we raise a request to deactivate the same logged in user id
+Expected result is it should return: Same logged in user can not deactivate himself
+ 
+
+PASSED
+
+
+***********************************TEST 4C*****************************************************
+Now we raise a request to deactivate the already deactivated account
+Expected result is it should return: User already deactivated
+ 
+
+PASSED
+
+
+***********************************TEST 4D*****************************************************
+Now we raise a request to deactivate right employee
+Expected result is it should return: Employee deactivated
+ 
+
+PASSED
+
+
+
+
+
+
+*********************************TEST 5 for employee display leaves**********************************************
+***********************************TEST 5A*****************************************************
+We are first going to raise a display leave request with a wrong year
+Expected result is it should return Wrong year chosen
+ 
+
+PASSED
+
+
+***********************************TEST 5B*****************************************************
+Now if the data is not available in the data base 
+Expected result is it should return: No data found 
+ 
+
+PASSED
+
+
+***********************************TEST 5C*****************************************************
+Now we show the data available in the database...
+Expected result is it should return: table show the data of leave
+ 
+
+PASSED
+
+
+***********************************TEST 5D*****************************************************
+Now if the the employee does not exist 
+Expected result is it should return: No data found 
+ 
+
+PASSED
+
+
+
+
+
+
+*********************************TEST 6 for  Display Salary**********************************************
+***********************************TEST 6A*****************************************************
+We are first going to raise a display salary request with wrong option
+Expected result is it should return error
+ 
+
+PASSED
+
+
+***********************************TEST 6B*****************************************************
+Now if the employee id is wrong
+Expected result is it should return error 
+ 
+
+PASSED
+
+
+***********************************TEST 6C*****************************************************
+Now we show the data available in the database...
+Expected result is it should return: table show the data of salary
+ 
+
+PASSED
+
+
+
+
+
+*****  TEST 7 Function: char* leave_request(int emp_id,int dd,int mm,int yy,int no_of_days,char leave_type[]) ****
+*********************  TEST 7A  **************************************************
+A leave request will be raised with all valid input parameters except the date which is invalid: 123/123/124
+Expected result is that it should return an Invalid date message 
+ 
+
+PASSED
+
+
+
+
+*****************  TEST 7B  **************************************************
+A leave request will be raised with all valid input parameters except the leave type which is invalid: ABCD 
+Expected result is it should return Invalid Leave Type 
+ 
+
+PASSED
+
+
+
+
+*****************  TEST 7C  ***************************************************
+A leave request will be raised with employee id that does not exist in the database
+Expected result is it should return User does not exist 
+ 
+
+PASSED
+
+
+
+
+*****************  TEST 7D  **************************************************
+A leave request will be raised with leave_type length greater than 10
+Expected result is that it should return Invalid string length for leave_type message
+ 
+
+PASSED
+
+
+
+
+*****************  TEST 7E  **************************************************
+
+ A leave request will be raised with all the right parameters and therefore will be raised successfully
+Expected result is it should return a string message Request raised successfully 
+ 
+
+PASSED
+
+
+
+
+
+*****  TEST 8 Function: char* employee_request(int emp_id,char dept[],char designation[]) ****
+*********************  TEST 8A  **************************************************
+The employee request function is called to raise employee request but emp_id of the manager who raises request doesn't exist in the database
+Expected result is that it should return User does not exist message 
+ 
+
+PASSED
+
+
+
+
+*****************  TEST 8B  **************************************************
+The employee request function is called to raise emp request but the department input to function is not the one assigned to the manager 
+Expected result is it should return Data Mismatch message as the department does not match the department assigned to the manager
+ 
+
+PASSED
+
+
+
+
+*****************  TEST 8C  ***************************************************
+The employee request function is called to raise emp request but the department length is greater than 10
+Expected result is it should return Department string length invalid 
+ 
+
+PASSED
+
+
+
+
+*****************  TEST 8D  ***************************************************
+The employee request function is called to raise emp request but the designation length is greater than 15
+Expected result is it should return Designation string length invalid 
+ 
+
+PASSED
+
+
+
+
+*****************  TEST 8E  **************************************************
+The employee request function is called to raise emp request with right parameters
+Expected result is that it should return Request raised successfully
+ 
+
+PASSED
+
+
+
+
+
+*****  TEST 9 Function: char* decision_leave_request(int req_id,int k) ****
+*********************  TEST 9A  **************************************************
+The decision leave request function is called but no leave request exists with the input request id
+Expected result is that it should return No such pending leave request exists message 
+ 
+
+PASSED
+
+
+*********************  TEST 9B  **************************************************
+The decision leave request function is called but decision input: k is invalid as k can be only 1 or 2
+Expected result is that it should return Invalid input for k message 
+ 
+
+PASSED
+
+
+*********************  TEST 9C  **************************************************
+The decision leave request function is called with right parameters to approve a leave request id
+Expected result is that it should return Leave request and Leave balance status updated successfully message 
+ 
+
+PASSED
+
+
+*********************  TEST 9D  **************************************************
+The decision leave request function is called to approve req id which is already approved
+Expected result is that it should return Request is already approved message 
+ 
+
+PASSED
+
+
+*********************  TEST 9E  **************************************************
+The decision leave request function is called with right parameters to reject a leave request id
+Expected result is that it should return Request Status Updated successfully message 
+ 
+
+PASSED
+
+
+
+
+
+*****  TEST 10 Function: char* employee_rating(int emp_id,int rate, char description[200],int year) ****
+*********************  TEST 10A  **************************************************
+The employee rating function is called with employee id '17' but it is not exist in the database 
+Expected result is that it should return Employee ID not found message 
+ 
+
+PASSED
+
+
+*********************  TEST 10B  **************************************************
+The employee rating function is called with rating '10' but the range is from 1 to 5 
+Expected result is that it should return 'Rating does not exceed 5' message 
+
+
+PASSED
+
+
+*********************  TEST 10C  **************************************************
+The employee rating function is called with rating '0' but the range is from 1 to 5 
+Expected result is that it should return 'Rating canot be 0' message 
+
+
+PASSED
+
+
+*********************  TEST 10D  **************************************************
+The employee rating function is called with year '200' but the range is from 2018 to 2020 
+Expected result is that it should return 'INVALID YEAR' message 
+ 
+
+PASSED
+
+
+*********************  TEST 10E  **************************************************
+The employee rating function is called for the existing employee 
+Expected result is that it should return 'Rating Updated' message 
+ 
+
+PASSED
+
+
+
+
+
+*****  TEST 11 Function: char* view_raised_grievances(int choice,int gri_choice) ****
+*********************  TEST 11A  **************************************************
+The view raised grievances function is called when no grievance is added in the table 'grievances' 
+Expected result is that it should return 'No Record with the query' message 
+ 
+
+PASSED
+
+
+*********************  TEST 11B  **************************************************
+The view raised grievances function is called when grievance is in the table 'grievances' 
+Expected result is that it should return 'Grievance Found for the employee ID' message 
+ 
+
+PASSED
+
+
+*********************  TEST 11C  **************************************************
+The view raised grievances function is called with right parameters 
+Expected result is that it should return 'Grievance Found' message 
+ 
+
+PASSED
+
+
+*********************  TEST 11D  **************************************************
+The view raised grievances function is called when employee ID is invalid 
+Expected result is that it should return 'Employee ID not found' message 
+ 
+
+PASSED
+
+
+*********************  TEST 11E  **************************************************
+The view raised grievances function is called with wrong choice number 
+Expected result is that it should return 'Wrong choice' message 
+ 
+
+PASSED
+
+
+
+
+
+*****  TEST 12 Function: char* add_salary(int e_id,char sal_type[20], float salary,char desig[50]) ****
+*********************  TEST 12A  **************************************************
+The add salary function is called but with wrong employee ID 
+Expected result is that it should return 'Employee ID not found' message 
+ 
+
+PASSED
+
+
+*********************  TEST 12B  **************************************************
+The add salary function is called with right parameters 
+Expected result is that it should return 'Salary added successfully' message 
+ 
+
+PASSED
+
+
+*********************  TEST 12C  **************************************************
+The add salary function is called but with wrong salary_type 
+Expected result is that it should return 'Wrong salary_type' message 
+ 
+
+PASSED
+
+

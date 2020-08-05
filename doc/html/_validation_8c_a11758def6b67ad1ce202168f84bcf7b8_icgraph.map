@@ -1,0 +1,9 @@
+<map id="leave_check" name="leave_check">
+<area shape="rect" id="node1" title="check the availability of leaves in the database for the particular year" alt="" coords="792,31,885,57"/>
+<area shape="rect" id="node2" href="$_validation_8c.html#a98f7cea390f8c27a349f27fa8374956e" title="Validating the attendance." alt="" coords="608,31,744,57"/>
+<area shape="rect" id="node3" href="$admin__attend__mgmt_8c.html#ac138eba1507443b2ad38f5046d24f7f3" title="Add the attendance of the user." alt="" coords="437,5,551,32"/>
+<area shape="rect" id="node7" href="$admin__attend__mgmt_8c.html#a05be99a37dcbc824a657fe08afa55a10" title="Update the attendance of the user." alt="" coords="428,56,560,83"/>
+<area shape="rect" id="node4" href="$admin__attend__mgmt_8c.html#a64e2f6fc2f36c6e5247282142943406d" title="Attendance Management and calls the function from this function." alt="" coords="281,31,380,57"/>
+<area shape="rect" id="node5" href="$employee__management_8c.html#a456f09d016ff1aa94f56b7465f5f5400" title=" " alt="" coords="104,31,233,57"/>
+<area shape="rect" id="node6" href="$_main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function which distributes various tasks to other functions." alt="" coords="5,31,56,57"/>
+</map>

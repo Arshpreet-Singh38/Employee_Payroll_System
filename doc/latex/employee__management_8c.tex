@@ -1,0 +1,406 @@
+\hypertarget{employee__management_8c}{}\doxysection{employee\+\_\+management.\+c File Reference}
+\label{employee__management_8c}\index{employee\_management.c@{employee\_management.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}validation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}employee\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}admin\+\_\+attendance.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}salary\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}employee.\+h\char`\"{}}\newline
+Include dependency graph for employee\+\_\+management.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__management_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{employee__management_8c_a59bcbb5f6896e44dfd79fa63508cfec3}{M\+A\+X\+\_\+\+Y\+E\+AR}}~2020
+\item 
+\#define \mbox{\hyperlink{employee__management_8c_a66979cc5bd82220ee4c973b4bcb36f10}{M\+I\+N\+\_\+\+Y\+E\+AR}}~2010
+\item 
+\#define \mbox{\hyperlink{employee__management_8c_a61d0d319cb00c61aaaee21009da3157c}{M\+A\+X\+\_\+\+M\+O\+N\+TH}}~12
+\item 
+\#define \mbox{\hyperlink{employee__management_8c_ac94fbf390c2a9532433d9d631abfe14f}{M\+I\+N\+\_\+\+M\+O\+N\+TH}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{employee__management_8c_a47fbe2f5e7eb7a7c470c4cb3f11db655}{sal\+\_\+inc}} ()
+\begin{DoxyCompactList}\small\item\em Assigning increments in salaries of the employees. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{employee__management_8c_a3323ff0699292581e3822677f0eb070a}{update\+\_\+salary}} (int emp\+\_\+id)
+\begin{DoxyCompactList}\small\item\em To update the salary by the admin. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{employee__management_8c_a908659de2e7a257d245dea82a1b658b0}{new\+\_\+leave\+\_\+detail}} ()
+\begin{DoxyCompactList}\small\item\em Assigning the employees with leaves for a specific year. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{employee__management_8c_af6bd8db84ba34a40f5b3200133864e96}{employee\+\_\+reuests}} ()
+\begin{DoxyCompactList}\small\item\em View and take decision on employee requests for attendance errors. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{employee__management_8c_a4deff038da64e7ead8470e2871dff128}{add\+\_\+employee}} (char dept\mbox{[}$\,$\mbox{]}, char desig\mbox{[}$\,$\mbox{]}, int check, int request\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Allows the admin to add a new employee in the database. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{employee__management_8c_ad9cad545ed088958bb487637947d0a7f}{deactivate}} (int emp\+\_\+id, int login\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Allows the admin to deactivate an existing employee. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{employee__management_8c_adefea89578123fc3017c2f62d2d2e582}{emp\+\_\+display\+\_\+details}} (char stmt\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Allows to display the employee details. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{employee__management_8c_a5661239612b41efda60e01c330de8145}{modify\+\_\+employee}} (int emp\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Allows the admin to modify employee details. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{employee__management_8c_acb2e951c1954f4027b15b075d54f4c53}{display\+\_\+leaves}} (int emp\+\_\+id, int year)
+\begin{DoxyCompactList}\small\item\em Display the leave details of the user (Admin,Employee,Manager). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{employee__management_8c_a456f09d016ff1aa94f56b7465f5f5400}{emp\+\_\+management}} (int i, int emp\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee__management_8c_a052efb23fddda7e16d53772256c142a4}{conn2}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee__management_8c_afd9865d4972a8bd1a15d829889ccaeb2}{oo1}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee__management_8c_a81a58467d6b6c6a63170be416caf53a1}{oo3}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee__management_8c_ac54480eb257b70851bbeca50248b8197}{conn8}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee__management_8c_a651f69fb3586e7b7d300b91325cda93c}{connect6}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee__management_8c_af0a94fc41d552e58812773bebd2bdd6f}{conn7}}
+\item 
+char \mbox{\hyperlink{employee__management_8c_a5cc3ea59fa1a54853f37025dcf53f83d}{query}} \mbox{[}1500\mbox{]}
+\item 
+int \mbox{\hyperlink{employee__management_8c_ad2e5f1833c91222647a749140a937753}{port6}} =3306
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Performs the functionality relating to management of the employees 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{employee__management_8c_a61d0d319cb00c61aaaee21009da3157c}\label{employee__management_8c_a61d0d319cb00c61aaaee21009da3157c}} 
+\index{employee\_management.c@{employee\_management.c}!MAX\_MONTH@{MAX\_MONTH}}
+\index{MAX\_MONTH@{MAX\_MONTH}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_MONTH}{MAX\_MONTH}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+M\+O\+N\+TH~12}
+
+\mbox{\Hypertarget{employee__management_8c_a59bcbb5f6896e44dfd79fa63508cfec3}\label{employee__management_8c_a59bcbb5f6896e44dfd79fa63508cfec3}} 
+\index{employee\_management.c@{employee\_management.c}!MAX\_YEAR@{MAX\_YEAR}}
+\index{MAX\_YEAR@{MAX\_YEAR}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_YEAR}{MAX\_YEAR}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+Y\+E\+AR~2020}
+
+\mbox{\Hypertarget{employee__management_8c_ac94fbf390c2a9532433d9d631abfe14f}\label{employee__management_8c_ac94fbf390c2a9532433d9d631abfe14f}} 
+\index{employee\_management.c@{employee\_management.c}!MIN\_MONTH@{MIN\_MONTH}}
+\index{MIN\_MONTH@{MIN\_MONTH}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{MIN\_MONTH}{MIN\_MONTH}}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+M\+O\+N\+TH~1}
+
+\mbox{\Hypertarget{employee__management_8c_a66979cc5bd82220ee4c973b4bcb36f10}\label{employee__management_8c_a66979cc5bd82220ee4c973b4bcb36f10}} 
+\index{employee\_management.c@{employee\_management.c}!MIN\_YEAR@{MIN\_YEAR}}
+\index{MIN\_YEAR@{MIN\_YEAR}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{MIN\_YEAR}{MIN\_YEAR}}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+Y\+E\+AR~2010}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{employee__management_8c_a4deff038da64e7ead8470e2871dff128}\label{employee__management_8c_a4deff038da64e7ead8470e2871dff128}} 
+\index{employee\_management.c@{employee\_management.c}!add\_employee@{add\_employee}}
+\index{add\_employee@{add\_employee}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{add\_employee()}{add\_employee()}}
+{\footnotesize\ttfamily char $\ast$ add\+\_\+employee (\begin{DoxyParamCaption}\item[{char}]{dept\mbox{[}$\,$\mbox{]},  }\item[{char}]{desig\mbox{[}$\,$\mbox{]},  }\item[{int}]{check,  }\item[{int}]{request\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Allows the admin to add a new employee in the database. 
+
+Allows the admin to add a new employee in emp\+\_\+details and login\+\_\+details in the database. This function is used either to add employee initially or in response to employee request by the manager. If responding to employee request by manager the input parameters will have auto-\/assigned values If adding employees initially the input parameter will have default values of \char`\"{}empty\char`\"{} for char type parameters and \textquotesingle{}0\textquotesingle{} for int type parameters and will be overwritten by user input
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & dept\mbox{[}\mbox{]} \char`\"{}empty\char`\"{} when adding employee initially department of the manager who rose employee request \\
+\hline
+\mbox{\texttt{ in}}  & {\em char} & desig\mbox{[}\mbox{]} \char`\"{}empty\char`\"{} when adding employee initially designation as requested by the manager who rose employee request \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & check\+: 0 for adding employee initially 1 for adding employee corresponding to employee request \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & request\+\_\+id unique request id corresponding to employee request raised\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string message for add employee status 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__management_8c_a4deff038da64e7ead8470e2871dff128_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__management_8c_a4deff038da64e7ead8470e2871dff128_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__management_8c_ad9cad545ed088958bb487637947d0a7f}\label{employee__management_8c_ad9cad545ed088958bb487637947d0a7f}} 
+\index{employee\_management.c@{employee\_management.c}!deactivate@{deactivate}}
+\index{deactivate@{deactivate}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{deactivate()}{deactivate()}}
+{\footnotesize\ttfamily char $\ast$ deactivate (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id,  }\item[{int}]{login\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Allows the admin to deactivate an existing employee. 
+
+Allows the admin to deactivate any existing employee. The data entry in login\+\_\+details is updated to \char`\"{}\+I\char`\"{}\+:Inactive for the employee.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em emp\+\_\+id} & employee id of the employee who has to be deactivated \\
+\hline
+\mbox{\texttt{ in}}  & {\em login\+\_\+id} & login id of the employee who has to be deactivated\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string message for deactivate employee status 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{employee__management_8c_ad9cad545ed088958bb487637947d0a7f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__management_8c_acb2e951c1954f4027b15b075d54f4c53}\label{employee__management_8c_acb2e951c1954f4027b15b075d54f4c53}} 
+\index{employee\_management.c@{employee\_management.c}!display\_leaves@{display\_leaves}}
+\index{display\_leaves@{display\_leaves}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{display\_leaves()}{display\_leaves()}}
+{\footnotesize\ttfamily int display\+\_\+leaves (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id,  }\item[{int}]{year }\end{DoxyParamCaption})}
+
+
+
+Display the leave details of the user (Admin,Employee,Manager). 
+
+Display the leave details\+: including the total leaves assigned and remaining leaves for the year. Admin can view leave details of all employees as well employee and manager can view leaves for themseleves.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em emp\+\_\+id} & employee id whose leave details to display \\
+\hline
+\mbox{\texttt{ in}}  & {\em year} & the year for which leaves to see\\
+\hline
+\end{DoxyParams}
+return int corresponding to display leave status Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__management_8c_acb2e951c1954f4027b15b075d54f4c53_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__management_8c_adefea89578123fc3017c2f62d2d2e582}\label{employee__management_8c_adefea89578123fc3017c2f62d2d2e582}} 
+\index{employee\_management.c@{employee\_management.c}!emp\_display\_details@{emp\_display\_details}}
+\index{emp\_display\_details@{emp\_display\_details}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{emp\_display\_details()}{emp\_display\_details()}}
+{\footnotesize\ttfamily void emp\+\_\+display\+\_\+details (\begin{DoxyParamCaption}\item[{char}]{stmt\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Allows to display the employee details. 
+
+Allows to display the employee details depending on input S\+QL query
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & stmt\mbox{[}\mbox{]} S\+QL query that holds the input to display employee details \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__management_8c_adefea89578123fc3017c2f62d2d2e582_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__management_8c_a456f09d016ff1aa94f56b7465f5f5400}\label{employee__management_8c_a456f09d016ff1aa94f56b7465f5f5400}} 
+\index{employee\_management.c@{employee\_management.c}!emp\_management@{emp\_management}}
+\index{emp\_management@{emp\_management}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{emp\_management()}{emp\_management()}}
+{\footnotesize\ttfamily int emp\+\_\+management (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__management_8c_a456f09d016ff1aa94f56b7465f5f5400_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{employee__management_8c_a456f09d016ff1aa94f56b7465f5f5400_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__management_8c_af6bd8db84ba34a40f5b3200133864e96}\label{employee__management_8c_af6bd8db84ba34a40f5b3200133864e96}} 
+\index{employee\_management.c@{employee\_management.c}!employee\_reuests@{employee\_reuests}}
+\index{employee\_reuests@{employee\_reuests}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{employee\_reuests()}{employee\_reuests()}}
+{\footnotesize\ttfamily void employee\+\_\+reuests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+View and take decision on employee requests for attendance errors. 
+
+Allows the admin to view and take decision on requests raised by employees for attendance discrepancy Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__management_8c_af6bd8db84ba34a40f5b3200133864e96_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__management_8c_a5661239612b41efda60e01c330de8145}\label{employee__management_8c_a5661239612b41efda60e01c330de8145}} 
+\index{employee\_management.c@{employee\_management.c}!modify\_employee@{modify\_employee}}
+\index{modify\_employee@{modify\_employee}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{modify\_employee()}{modify\_employee()}}
+{\footnotesize\ttfamily char $\ast$ modify\+\_\+employee (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Allows the admin to modify employee details. 
+
+Allows the admin to modify existing employee details. Depending on admin input different fields can be modified.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em emp\+\_\+id} & employee id whose details to be modified by the admin\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string message for modify employee status 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__management_8c_a5661239612b41efda60e01c330de8145_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__management_8c_a5661239612b41efda60e01c330de8145_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__management_8c_a908659de2e7a257d245dea82a1b658b0}\label{employee__management_8c_a908659de2e7a257d245dea82a1b658b0}} 
+\index{employee\_management.c@{employee\_management.c}!new\_leave\_detail@{new\_leave\_detail}}
+\index{new\_leave\_detail@{new\_leave\_detail}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{new\_leave\_detail()}{new\_leave\_detail()}}
+{\footnotesize\ttfamily void new\+\_\+leave\+\_\+detail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Assigning the employees with leaves for a specific year. 
+
+Allows the admin to assign leaves to an employee in a particular year. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__management_8c_a908659de2e7a257d245dea82a1b658b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__management_8c_a47fbe2f5e7eb7a7c470c4cb3f11db655}\label{employee__management_8c_a47fbe2f5e7eb7a7c470c4cb3f11db655}} 
+\index{employee\_management.c@{employee\_management.c}!sal\_inc@{sal\_inc}}
+\index{sal\_inc@{sal\_inc}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{sal\_inc()}{sal\_inc()}}
+{\footnotesize\ttfamily void sal\+\_\+inc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Assigning increments in salaries of the employees. 
+
+Allows the admin to assign increments in the salary of employees at the end of year based on the rating given by their manager Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{employee__management_8c_a47fbe2f5e7eb7a7c470c4cb3f11db655_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__management_8c_a3323ff0699292581e3822677f0eb070a}\label{employee__management_8c_a3323ff0699292581e3822677f0eb070a}} 
+\index{employee\_management.c@{employee\_management.c}!update\_salary@{update\_salary}}
+\index{update\_salary@{update\_salary}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{update\_salary()}{update\_salary()}}
+{\footnotesize\ttfamily char $\ast$ update\+\_\+salary (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+To update the salary by the admin. 
+
+Allows the admin to update the salary of the employees and managers. Salaries can be incremented and also modified for calculated salary
+
+\begin{DoxyReturn}{Returns}
+string message for salary updation status 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__management_8c_a3323ff0699292581e3822677f0eb070a_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{employee__management_8c_a052efb23fddda7e16d53772256c142a4}\label{employee__management_8c_a052efb23fddda7e16d53772256c142a4}} 
+\index{employee\_management.c@{employee\_management.c}!conn2@{conn2}}
+\index{conn2@{conn2}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn2}{conn2}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ conn2}
+
+\mbox{\Hypertarget{employee__management_8c_af0a94fc41d552e58812773bebd2bdd6f}\label{employee__management_8c_af0a94fc41d552e58812773bebd2bdd6f}} 
+\index{employee\_management.c@{employee\_management.c}!conn7@{conn7}}
+\index{conn7@{conn7}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn7}{conn7}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ conn7}
+
+\mbox{\Hypertarget{employee__management_8c_ac54480eb257b70851bbeca50248b8197}\label{employee__management_8c_ac54480eb257b70851bbeca50248b8197}} 
+\index{employee\_management.c@{employee\_management.c}!conn8@{conn8}}
+\index{conn8@{conn8}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn8}{conn8}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ conn8}
+
+\mbox{\Hypertarget{employee__management_8c_a651f69fb3586e7b7d300b91325cda93c}\label{employee__management_8c_a651f69fb3586e7b7d300b91325cda93c}} 
+\index{employee\_management.c@{employee\_management.c}!connect6@{connect6}}
+\index{connect6@{connect6}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{connect6}{connect6}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ connect6}
+
+\mbox{\Hypertarget{employee__management_8c_afd9865d4972a8bd1a15d829889ccaeb2}\label{employee__management_8c_afd9865d4972a8bd1a15d829889ccaeb2}} 
+\index{employee\_management.c@{employee\_management.c}!oo1@{oo1}}
+\index{oo1@{oo1}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{oo1}{oo1}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ oo1}
+
+\mbox{\Hypertarget{employee__management_8c_a81a58467d6b6c6a63170be416caf53a1}\label{employee__management_8c_a81a58467d6b6c6a63170be416caf53a1}} 
+\index{employee\_management.c@{employee\_management.c}!oo3@{oo3}}
+\index{oo3@{oo3}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{oo3}{oo3}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ oo3}
+
+\mbox{\Hypertarget{employee__management_8c_ad2e5f1833c91222647a749140a937753}\label{employee__management_8c_ad2e5f1833c91222647a749140a937753}} 
+\index{employee\_management.c@{employee\_management.c}!port6@{port6}}
+\index{port6@{port6}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{port6}{port6}}
+{\footnotesize\ttfamily int port6 =3306}
+
+\mbox{\Hypertarget{employee__management_8c_a5cc3ea59fa1a54853f37025dcf53f83d}\label{employee__management_8c_a5cc3ea59fa1a54853f37025dcf53f83d}} 
+\index{employee\_management.c@{employee\_management.c}!query@{query}}
+\index{query@{query}!employee\_management.c@{employee\_management.c}}
+\doxysubsubsection{\texorpdfstring{query}{query}}
+{\footnotesize\ttfamily char query\mbox{[}1500\mbox{]}}
+

@@ -1,0 +1,6 @@
+<map id="new_month" name="new_month">
+<area shape="rect" id="node1" title="Add the new_month for attendance of the user." alt="" coords="428,5,516,32"/>
+<area shape="rect" id="node2" href="$admin__attend__mgmt_8c.html#a64e2f6fc2f36c6e5247282142943406d" title="Attendance Management and calls the function from this function." alt="" coords="281,5,380,32"/>
+<area shape="rect" id="node3" href="$employee__management_8c.html#a456f09d016ff1aa94f56b7465f5f5400" title=" " alt="" coords="104,5,233,32"/>
+<area shape="rect" id="node4" href="$_main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function which distributes various tasks to other functions." alt="" coords="5,5,56,32"/>
+</map>

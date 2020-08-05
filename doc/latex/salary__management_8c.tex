@@ -1,0 +1,123 @@
+\hypertarget{salary__management_8c}{}\doxysection{salary\+\_\+management.\+c File Reference}
+\label{salary__management_8c}\index{salary\_management.c@{salary\_management.c}}
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for salary\+\_\+management.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{salary__management_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{salary__management_8c_ab30d7b9e57d1c383eb718e722f8d65c1}{add\+\_\+salary}} (int e\+\_\+id, char sal\+\_\+type\mbox{[}10\mbox{]}, float salary, char desig\mbox{[}50\mbox{]})
+\item 
+char $\ast$ \mbox{\hyperlink{salary__management_8c_ac6759d5d048ebf533e2f46da0bd6f905}{compute\+\_\+salary}} (char stmt\mbox{[}1500\mbox{]}, char sal\+\_\+type\mbox{[}10\mbox{]})
+\item 
+int \mbox{\hyperlink{salary__management_8c_ad3a6cb1b67c8b194be60e0120838f3b2}{emp\+\_\+sal\+\_\+mgmt}} ()
+\begin{DoxyCompactList}\small\item\em Create connection and basically calls the function from here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{salary__management_8c_af446d9e97167de66c67e45955a752028}{conn7}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{salary__management_8c_ac54480eb257b70851bbeca50248b8197}{conn8}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{salary__management_8c_ac16351d2376ab32723d30a01ecea7f9f}{conn9}}
+\item 
+int \mbox{\hyperlink{salary__management_8c_ab5ee6d7e8f1fc503f56439cbbb83da48}{port11}} =3306
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Perform the Add salary function and computation of the salary for all users. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{salary__management_8c_ab30d7b9e57d1c383eb718e722f8d65c1}\label{salary__management_8c_ab30d7b9e57d1c383eb718e722f8d65c1}} 
+\index{salary\_management.c@{salary\_management.c}!add\_salary@{add\_salary}}
+\index{add\_salary@{add\_salary}!salary\_management.c@{salary\_management.c}}
+\doxysubsubsection{\texorpdfstring{add\_salary()}{add\_salary()}}
+{\footnotesize\ttfamily char$\ast$ add\+\_\+salary (\begin{DoxyParamCaption}\item[{int}]{e\+\_\+id,  }\item[{char}]{sal\+\_\+type\mbox{[}10\mbox{]},  }\item[{float}]{salary,  }\item[{char}]{desig\mbox{[}50\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{salary__management_8c_ab30d7b9e57d1c383eb718e722f8d65c1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{salary__management_8c_ac6759d5d048ebf533e2f46da0bd6f905}\label{salary__management_8c_ac6759d5d048ebf533e2f46da0bd6f905}} 
+\index{salary\_management.c@{salary\_management.c}!compute\_salary@{compute\_salary}}
+\index{compute\_salary@{compute\_salary}!salary\_management.c@{salary\_management.c}}
+\doxysubsubsection{\texorpdfstring{compute\_salary()}{compute\_salary()}}
+{\footnotesize\ttfamily char$\ast$ compute\+\_\+salary (\begin{DoxyParamCaption}\item[{char}]{stmt\mbox{[}1500\mbox{]},  }\item[{char}]{sal\+\_\+type\mbox{[}10\mbox{]} }\end{DoxyParamCaption})}
+
+Initially, Connection is verified that, it is established or not Query\+: Access number of hours of the employee in \char`\"{}hourly\+\_\+attendance\char`\"{} table according to month,year and employee id If employee works more than 40 hours than it will paid as overtime, otherwise normal pay For Admin and Manager, absent will be concludedHere is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{salary__management_8c_ac6759d5d048ebf533e2f46da0bd6f905_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{salary__management_8c_ad3a6cb1b67c8b194be60e0120838f3b2}\label{salary__management_8c_ad3a6cb1b67c8b194be60e0120838f3b2}} 
+\index{salary\_management.c@{salary\_management.c}!emp\_sal\_mgmt@{emp\_sal\_mgmt}}
+\index{emp\_sal\_mgmt@{emp\_sal\_mgmt}!salary\_management.c@{salary\_management.c}}
+\doxysubsubsection{\texorpdfstring{emp\_sal\_mgmt()}{emp\_sal\_mgmt()}}
+{\footnotesize\ttfamily int emp\+\_\+sal\+\_\+mgmt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create connection and basically calls the function from here. 
+
+It will initialize the connection and calls the other function from this function.
+
+\begin{DoxyReturn}{Returns}
+0\+: Unsuccessful Connection with the database 1\+: Successful completion of the query 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{salary__management_8c_ad3a6cb1b67c8b194be60e0120838f3b2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{salary__management_8c_ad3a6cb1b67c8b194be60e0120838f3b2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{salary__management_8c_af446d9e97167de66c67e45955a752028}\label{salary__management_8c_af446d9e97167de66c67e45955a752028}} 
+\index{salary\_management.c@{salary\_management.c}!conn7@{conn7}}
+\index{conn7@{conn7}!salary\_management.c@{salary\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn7}{conn7}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ conn7}
+
+\mbox{\Hypertarget{salary__management_8c_ac54480eb257b70851bbeca50248b8197}\label{salary__management_8c_ac54480eb257b70851bbeca50248b8197}} 
+\index{salary\_management.c@{salary\_management.c}!conn8@{conn8}}
+\index{conn8@{conn8}!salary\_management.c@{salary\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn8}{conn8}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ conn8}
+
+\mbox{\Hypertarget{salary__management_8c_ac16351d2376ab32723d30a01ecea7f9f}\label{salary__management_8c_ac16351d2376ab32723d30a01ecea7f9f}} 
+\index{salary\_management.c@{salary\_management.c}!conn9@{conn9}}
+\index{conn9@{conn9}!salary\_management.c@{salary\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn9}{conn9}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ conn9}
+
+\mbox{\Hypertarget{salary__management_8c_ab5ee6d7e8f1fc503f56439cbbb83da48}\label{salary__management_8c_ab5ee6d7e8f1fc503f56439cbbb83da48}} 
+\index{salary\_management.c@{salary\_management.c}!port11@{port11}}
+\index{port11@{port11}!salary\_management.c@{salary\_management.c}}
+\doxysubsubsection{\texorpdfstring{port11}{port11}}
+{\footnotesize\ttfamily int port11 =3306}
+

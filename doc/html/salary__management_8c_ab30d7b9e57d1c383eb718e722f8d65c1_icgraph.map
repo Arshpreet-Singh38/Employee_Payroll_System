@@ -1,0 +1,7 @@
+<map id="add_salary" name="add_salary">
+<area shape="rect" id="node1" title=" " alt="" coords="663,31,748,57"/>
+<area shape="rect" id="node2" href="$employee__management_8c.html#a4deff038da64e7ead8470e2871dff128" title="Allows the admin to add a new employee in the database." alt="" coords="508,31,615,57"/>
+<area shape="rect" id="node3" href="$admin__dept__management_8c.html#a2e41248091dce857522c62f5c365d035" title="Add the employees by the admin in the department as requested in the employee request by manager." alt="" coords="281,5,460,32"/>
+<area shape="rect" id="node4" href="$employee__management_8c.html#a456f09d016ff1aa94f56b7465f5f5400" title=" " alt="" coords="104,31,233,57"/>
+<area shape="rect" id="node5" href="$_main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function which distributes various tasks to other functions." alt="" coords="5,31,56,57"/>
+</map>

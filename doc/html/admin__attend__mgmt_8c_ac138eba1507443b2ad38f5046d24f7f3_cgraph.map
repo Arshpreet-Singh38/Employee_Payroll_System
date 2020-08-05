@@ -1,0 +1,8 @@
+<map id="add_attendance" name="add_attendance">
+<area shape="rect" id="node1" title="Add the attendance of the user." alt="" coords="5,56,120,83"/>
+<area shape="rect" id="node2" href="$admin__attend__mgmt_8c.html#a4757b9e47ec9662432e9b196d85026dc" title="Month availability before inserting attendance." alt="" coords="168,5,363,32"/>
+<area shape="rect" id="node3" href="$_validation_8c.html#a98f7cea390f8c27a349f27fa8374956e" title="Validating the attendance." alt="" coords="197,56,333,83"/>
+<area shape="rect" id="node6" href="$_validation_8c.html#aad0e0d513f76295005bffda6a837e8ca" title="Validating the current date." alt="" coords="217,107,314,133"/>
+<area shape="rect" id="node4" href="$_validation_8c.html#a11758def6b67ad1ce202168f84bcf7b8" title="check the availability of leaves in the database for the particular year" alt="" coords="411,31,504,57"/>
+<area shape="rect" id="node5" href="$_validation_8c.html#acdfc0f8ee81107535c88f945cbfeb305" title="Removes the extra spacing." alt="" coords="433,81,481,108"/>
+</map>

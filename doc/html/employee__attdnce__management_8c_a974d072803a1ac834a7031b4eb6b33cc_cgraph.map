@@ -1,0 +1,11 @@
+<map id="emp_attendance_mgmt" name="emp_attendance_mgmt">
+<area shape="rect" id="node1" title="attendance management takes 1 argument." alt="" coords="5,132,164,159"/>
+<area shape="rect" id="node2" href="$employee__attdnce__management_8c.html#aa0712136e81ce7ce66087f94ee484c98" title="attendance change function takes 5 arguments." alt="" coords="224,5,359,32"/>
+<area shape="rect" id="node4" href="$_validation_8c.html#a279666b874e36a99e3e1b713535c07f3" title="Validating empType Salaried or Hourly." alt="" coords="238,56,345,83"/>
+<area shape="rect" id="node5" href="$attendance__display_8c.html#a2e8b07ee7dce7c31811c48724124be9e" title="View the attendance for hourly employees." alt="" coords="212,107,371,133"/>
+<area shape="rect" id="node7" href="$_validation_8c.html#a41a17a1b0e1193a6527547bc81dd9080" title="Validating that string is empty or not." alt="" coords="253,157,329,184"/>
+<area shape="rect" id="node8" href="$employee__attdnce__management_8c.html#a5c1c1986deb9e33779631af6fb852368" title="reuest_status takes 1 argument." alt="" coords="241,208,342,235"/>
+<area shape="rect" id="node9" href="$attendance__display_8c.html#a0fee0bbf0bd0dabdb34a069d8249583a" title="View the attendance for salaried employees." alt="" coords="233,259,350,285"/>
+<area shape="rect" id="node3" href="$_validation_8c.html#a49318cdd5502a471c9bbe23dad46a4db" title="Validating the current month." alt="" coords="419,5,573,32"/>
+<area shape="rect" id="node6" href="$_validation_8c.html#aad0e0d513f76295005bffda6a837e8ca" title="Validating the current date." alt="" coords="447,183,545,209"/>
+</map>

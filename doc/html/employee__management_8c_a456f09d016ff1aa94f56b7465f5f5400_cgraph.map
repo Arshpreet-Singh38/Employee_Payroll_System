@@ -1,0 +1,52 @@
+<map id="emp_management" name="emp_management">
+<area shape="rect" id="node1" title=" " alt="" coords="5,854,135,880"/>
+<area shape="rect" id="node2" href="$employee__management_8c.html#a4deff038da64e7ead8470e2871dff128" title="Allows the admin to add a new employee in the database." alt="" coords="417,207,524,234"/>
+<area shape="rect" id="node7" href="$employee__management_8c.html#acb2e951c1954f4027b15b075d54f4c53" title="Display the leave details of the user (Admin,Employee,Manager)." alt="" coords="739,347,846,374"/>
+<area shape="rect" id="node8" href="$employee_8c.html#a45ac57781e058f82ff9ea6e93b6f5277" title="Display salary with the Employee ID." alt="" coords="740,702,845,728"/>
+<area shape="rect" id="node19" href="$employee_8c.html#a73be806440a7e65d401c7faa13314ec7" title="Change the password of the user." alt="" coords="936,68,1063,95"/>
+<area shape="rect" id="node27" href="$employee__personal__dtl__management_8c.html#a37a7c15368c6ad8e3dfde25f64012a85" title="Raise grievances or complaints aginst others by Admin,Manager and EMployee." alt="" coords="733,651,852,678"/>
+<area shape="rect" id="node28" href="$employee__personal__dtl__management_8c.html#ab2944961bf4c446f74bbe998397dda83" title="Access the database to display the raised grievances by the users." alt="" coords="715,752,871,779"/>
+<area shape="rect" id="node29" href="$admin__dept__management_8c.html#a2e41248091dce857522c62f5c365d035" title="Add the employees by the admin in the department as requested in the employee request by manager." alt="" coords="183,290,361,316"/>
+<area shape="rect" id="node30" href="$admin__attend__mgmt_8c.html#a64e2f6fc2f36c6e5247282142943406d" title="Attendance Management and calls the function from this function." alt="" coords="743,1031,842,1058"/>
+<area shape="rect" id="node39" href="$employee__management_8c.html#ad9cad545ed088958bb487637947d0a7f" title="Allows the admin to deactivate an existing employee." alt="" coords="232,803,312,830"/>
+<area shape="rect" id="node40" href="$leave__request_8c.html#afbcea76e0984cb5751e1323ac4ec3db1" title="Allows the admin to take can action on pending leave requests." alt="" coords="194,854,350,880"/>
+<area shape="rect" id="node41" href="$employee__management_8c.html#adefea89578123fc3017c2f62d2d2e582" title="Allows to display the employee details." alt="" coords="202,904,342,931"/>
+<area shape="rect" id="node42" href="$salary__management_8c.html#ad3a6cb1b67c8b194be60e0120838f3b2" title="Create connection and basically calls the function from here." alt="" coords="217,955,327,982"/>
+<area shape="rect" id="node44" href="$employee__management_8c.html#af6bd8db84ba34a40f5b3200133864e96" title="View and take decision on employee requests for attendance errors." alt="" coords="208,1006,336,1032"/>
+<area shape="rect" id="node45" href="$employee__management_8c.html#a5661239612b41efda60e01c330de8145" title="Allows the admin to modify employee details." alt="" coords="409,550,532,576"/>
+<area shape="rect" id="node46" href="$employee__management_8c.html#a908659de2e7a257d245dea82a1b658b0" title="Assigning the employees with leaves for a specific year." alt="" coords="213,1107,331,1134"/>
+<area shape="rect" id="node47" href="$employee__management_8c.html#a47fbe2f5e7eb7a7c470c4cb3f11db655" title="Assigning increments in salaries of the employees." alt="" coords="241,1158,303,1184"/>
+<area shape="rect" id="node48" href="$employee__management_8c.html#a3323ff0699292581e3822677f0eb070a" title="To update the salary by the admin." alt="" coords="221,1208,323,1235"/>
+<area shape="rect" id="node49" href="$leave__request_8c.html#a5ffb474d392bdc6c6c78b476e389f7f3" title="Allows the admin to view all the leave requests that are still pending." alt="" coords="205,1260,339,1301"/>
+<area shape="rect" id="node50" href="$admin__dept__management_8c.html#ae10129a63e057e21927cb021e2a8225c" title="View the pending employee requests raised by the managers to perform actions by the admin." alt="" coords="195,1326,349,1352"/>
+<area shape="rect" id="node3" href="$salary__management_8c.html#ab30d7b9e57d1c383eb718e722f8d65c1" title=" " alt="" coords="580,94,665,120"/>
+<area shape="rect" id="node4" href="$_validation_8c.html#a16d7f66201af135f0e60ffc6ac3cbd18" title="Validating the date,month and year." alt="" coords="587,43,659,70"/>
+<area shape="rect" id="node6" href="$employee_8c.html#a2b298dd5c9c227ae010b9a65fec71715" title="Basically call the function from this main function." alt="" coords="583,550,662,576"/>
+<area shape="rect" id="node15" href="$_validation_8c.html#a41a17a1b0e1193a6527547bc81dd9080" title="Validating that string is empty or not." alt="" coords="1186,651,1262,678"/>
+<area shape="rect" id="node24" href="$_validation_8c.html#a3b3f4c2e58ff48da389b53b28a3548d2" title="Validating the given string." alt="" coords="1181,398,1267,424"/>
+<area shape="rect" id="node25" href="$_validation_8c.html#abe0a185859fac04fb0b08df384b15cf7" title="Validating the Phone number." alt="" coords="1179,195,1269,222"/>
+<area shape="rect" id="node5" href="$_validation_8c.html#aa7c6f8a683bed908987c7d07304623f8" title="Validating the year as leap or not." alt="" coords="765,43,821,70"/>
+<area shape="rect" id="node9" href="$employee__attdnce__management_8c.html#a974d072803a1ac834a7031b4eb6b33cc" title="attendance management takes 1 argument." alt="" coords="713,550,872,576"/>
+<area shape="rect" id="node18" href="$employee__personal__dtl__management_8c.html#aab11849fbd26ca8ce98aabc04a1b8f08" title="Create connection and basically calls the function from here." alt="" coords="730,448,855,475"/>
+<area shape="rect" id="node26" href="$leave__request_8c.html#aae90fd3e18df10e9a4f25ff71d3553c5" title="Allow the users to raise a leave request." alt="" coords="742,600,843,627"/>
+<area shape="rect" id="node10" href="$employee__attdnce__management_8c.html#aa0712136e81ce7ce66087f94ee484c98" title="attendance change function takes 5 arguments." alt="" coords="932,600,1067,627"/>
+<area shape="rect" id="node12" href="$_validation_8c.html#a279666b874e36a99e3e1b713535c07f3" title="Validating empType Salaried or Hourly." alt="" coords="946,904,1053,931"/>
+<area shape="rect" id="node13" href="$attendance__display_8c.html#a2e8b07ee7dce7c31811c48724124be9e" title="View the attendance for hourly employees." alt="" coords="920,854,1079,880"/>
+<area shape="rect" id="node16" href="$employee__attdnce__management_8c.html#a5c1c1986deb9e33779631af6fb852368" title="reuest_status takes 1 argument." alt="" coords="949,550,1050,576"/>
+<area shape="rect" id="node17" href="$attendance__display_8c.html#a0fee0bbf0bd0dabdb34a069d8249583a" title="View the attendance for salaried employees." alt="" coords="941,955,1058,982"/>
+<area shape="rect" id="node11" href="$_validation_8c.html#a49318cdd5502a471c9bbe23dad46a4db" title="Validating the current month." alt="" coords="1147,600,1301,627"/>
+<area shape="rect" id="node14" href="$_validation_8c.html#aad0e0d513f76295005bffda6a837e8ca" title="Validating the current date." alt="" coords="1175,1006,1273,1032"/>
+<area shape="rect" id="node22" href="$employee__personal__dtl__management_8c.html#afbd1bf8428574eac0e3a329a0a88d362" title="Access the database and display the details of the employee." alt="" coords="952,448,1047,475"/>
+<area shape="rect" id="node23" href="$employee__personal__dtl__management_8c.html#a6347d64cacde5357741c209f6e4ab82e" title="Access the database for their details to be modified by the employee." alt="" coords="937,499,1061,526"/>
+<area shape="rect" id="node20" href="$employee_8c.html#a8f65fa5624451cef522c515c05d6be65" title="Change password of the user." alt="" coords="1175,43,1273,70"/>
+<area shape="rect" id="node21" href="$employee_8c.html#af5978fab9fa6dd4ced1c3a8ab1251f7b" title="Get or scan the value from the console screen." alt="" coords="1197,94,1251,120"/>
+<area shape="rect" id="node31" href="$admin__attend__mgmt_8c.html#ac138eba1507443b2ad38f5046d24f7f3" title="Add the attendance of the user." alt="" coords="942,1158,1057,1184"/>
+<area shape="rect" id="node36" href="$admin__attend__mgmt_8c.html#a3b91fdefb5f5cdf7e785feeb24c843a5" title="Add the attendance of the employees." alt="" coords="935,1056,1063,1083"/>
+<area shape="rect" id="node37" href="$admin__attend__mgmt_8c.html#ac954558374aa1d041896a8d6ad7fb617" title="Add the new_month for attendance of the user." alt="" coords="955,1006,1043,1032"/>
+<area shape="rect" id="node38" href="$admin__attend__mgmt_8c.html#a05be99a37dcbc824a657fe08afa55a10" title="Update the attendance of the user." alt="" coords="933,1107,1065,1134"/>
+<area shape="rect" id="node32" href="$admin__attend__mgmt_8c.html#a4757b9e47ec9662432e9b196d85026dc" title="Month availability before inserting attendance." alt="" coords="1127,1158,1321,1184"/>
+<area shape="rect" id="node33" href="$_validation_8c.html#a98f7cea390f8c27a349f27fa8374956e" title="Validating the attendance." alt="" coords="1156,1107,1292,1134"/>
+<area shape="rect" id="node34" href="$_validation_8c.html#a11758def6b67ad1ce202168f84bcf7b8" title="check the availability of leaves in the database for the particular year" alt="" coords="1369,1082,1463,1108"/>
+<area shape="rect" id="node35" href="$_validation_8c.html#acdfc0f8ee81107535c88f945cbfeb305" title="Removes the extra spacing." alt="" coords="1392,1132,1440,1159"/>
+<area shape="rect" id="node43" href="$salary__management_8c.html#ac6759d5d048ebf533e2f46da0bd6f905" title=" " alt="" coords="413,955,528,982"/>
+</map>

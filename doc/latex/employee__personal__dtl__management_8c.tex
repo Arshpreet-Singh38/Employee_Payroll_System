@@ -1,0 +1,288 @@
+\hypertarget{employee__personal__dtl__management_8c}{}\doxysection{employee\+\_\+personal\+\_\+dtl\+\_\+management.\+c File Reference}
+\label{employee__personal__dtl__management_8c}\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}validation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}employee\+\_\+personal\+\_\+dtl\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}employee.\+h\char`\"{}}\newline
+Include dependency graph for employee\+\_\+personal\+\_\+dtl\+\_\+management.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__personal__dtl__management_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{employee__personal__dtl__management_8c_a5871356500f559add06ea81d60331b1b}{Y\+E\+AR}}~2020
+\item 
+\#define \mbox{\hyperlink{employee__personal__dtl__management_8c_a66979cc5bd82220ee4c973b4bcb36f10}{M\+I\+N\+\_\+\+Y\+E\+AR}}~2018
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{employee__personal__dtl__management_8c_afbd1bf8428574eac0e3a329a0a88d362}{emp\+\_\+display}} (char stmt\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Access the database and display the details of the employee. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{employee__personal__dtl__management_8c_a6347d64cacde5357741c209f6e4ab82e}{update\+\_\+employee}} (int emp\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Access the database for their details to be modified by the employee. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{employee__personal__dtl__management_8c_a37a7c15368c6ad8e3dfde25f64012a85}{raise\+\_\+grievances}} (int e\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Raise grievances or complaints aginst others by Admin,Manager and E\+Mployee. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{employee__personal__dtl__management_8c_ab2944961bf4c446f74bbe998397dda83}{view\+\_\+raised\+\_\+grievances}} (int choice, int gri\+\_\+choice)
+\begin{DoxyCompactList}\small\item\em Access the database to display the raised grievances by the users. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{employee__personal__dtl__management_8c_a756f399a223791a0b1471688a9d290bf}{employee\+\_\+rating}} (int e\+\_\+id, int rate, char description\mbox{[}200\mbox{]}, int year)
+\begin{DoxyCompactList}\small\item\em Manager can rate the employees using this function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{employee__personal__dtl__management_8c_aab11849fbd26ca8ce98aabc04a1b8f08}{emp\+\_\+detail\+\_\+mgmt}} (int emp\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Create connection and basically calls the function from here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee__personal__dtl__management_8c_a9ccff4eb02e1f2ce57d9dca576ba9d35}{conn3}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee__personal__dtl__management_8c_ac54480eb257b70851bbeca50248b8197}{conn8}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee__personal__dtl__management_8c_ac16351d2376ab32723d30a01ecea7f9f}{conn9}}
+\item 
+int \mbox{\hyperlink{employee__personal__dtl__management_8c_a667ad2b0ce399a421df1996983cc3269}{port7}} =3306
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+It will display the details of the employee such as employee personal detail Employee feedback given by manager which help in increments or promotions Raised and View Grievances by the Admin,Manager and Employee and User have the option to be anonymous or not. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_a66979cc5bd82220ee4c973b4bcb36f10}\label{employee__personal__dtl__management_8c_a66979cc5bd82220ee4c973b4bcb36f10}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!MIN\_YEAR@{MIN\_YEAR}}
+\index{MIN\_YEAR@{MIN\_YEAR}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{MIN\_YEAR}{MIN\_YEAR}}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+Y\+E\+AR~2018}
+
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_a5871356500f559add06ea81d60331b1b}\label{employee__personal__dtl__management_8c_a5871356500f559add06ea81d60331b1b}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!YEAR@{YEAR}}
+\index{YEAR@{YEAR}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{YEAR}{YEAR}}
+{\footnotesize\ttfamily \#define Y\+E\+AR~2020}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_aab11849fbd26ca8ce98aabc04a1b8f08}\label{employee__personal__dtl__management_8c_aab11849fbd26ca8ce98aabc04a1b8f08}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!emp\_detail\_mgmt@{emp\_detail\_mgmt}}
+\index{emp\_detail\_mgmt@{emp\_detail\_mgmt}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{emp\_detail\_mgmt()}{emp\_detail\_mgmt()}}
+{\footnotesize\ttfamily int emp\+\_\+detail\+\_\+mgmt (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Create connection and basically calls the function from here. 
+
+It will initialize the connection and calls the other function from this function.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & emp\+\_\+id\+: Employee ID for the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing because every functions is handled internally. 
+\end{DoxyReturn}
+Case 1\+: Query is passed from here to display the employee details Case2\+: Update function is called with emp\+\_\+id as
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Case3} & Query is passed from here to view the feedback of the employee Case4\+: Change Password function is called with emp\+\_\+id as\\
+\hline
+\mbox{\texttt{ in}}  & {\em } & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__personal__dtl__management_8c_aab11849fbd26ca8ce98aabc04a1b8f08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__personal__dtl__management_8c_aab11849fbd26ca8ce98aabc04a1b8f08_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_afbd1bf8428574eac0e3a329a0a88d362}\label{employee__personal__dtl__management_8c_afbd1bf8428574eac0e3a329a0a88d362}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!emp\_display@{emp\_display}}
+\index{emp\_display@{emp\_display}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{emp\_display()}{emp\_display()}}
+{\footnotesize\ttfamily void emp\+\_\+display (\begin{DoxyParamCaption}\item[{char}]{stmt\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Access the database and display the details of the employee. 
+
+It will display the details of the employees.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & stmt\+: Query passed from emp\+\_\+detail\+\_\+mgmt to display the employee details and their rating given by the manager.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing because the data retrieved from the database is printing on the console screen. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__personal__dtl__management_8c_afbd1bf8428574eac0e3a329a0a88d362_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_a756f399a223791a0b1471688a9d290bf}\label{employee__personal__dtl__management_8c_a756f399a223791a0b1471688a9d290bf}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!employee\_rating@{employee\_rating}}
+\index{employee\_rating@{employee\_rating}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{employee\_rating()}{employee\_rating()}}
+{\footnotesize\ttfamily char$\ast$ employee\+\_\+rating (\begin{DoxyParamCaption}\item[{int}]{e\+\_\+id,  }\item[{int}]{rate,  }\item[{char}]{description\mbox{[}200\mbox{]},  }\item[{int}]{year }\end{DoxyParamCaption})}
+
+
+
+Manager can rate the employees using this function. 
+
+Employees will get the rating by their Manager for the increment/promotions The rating is from 1 to 5 and cannot accept others value than 1,2,3,4 and 5 Employee ID is also validated that it is active or inactive. Description can be entered upto 200 character, which signifies qualities of the employee Year of the rating is also given and validated The values are inserted in emp\+\_\+perfor function
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & e\+\_\+id Integer input value from the user int rate Integer input value as rate for the employee char description \mbox{[}200\mbox{]} Array of character of length 200 int year Integer input value as year of the rating\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User Type\+: Not Establish connection\+: For error Not connected \+: Fail to establish the connection with database Failed to execute the query\+: Connection problem for execution of the query Rating Added or Rating Updated\+: Positive case I\+N\+V\+A\+L\+ID year, Rating cannot exceed 5, Rating can not be 0\+: Negative Case 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{employee__personal__dtl__management_8c_a756f399a223791a0b1471688a9d290bf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_a37a7c15368c6ad8e3dfde25f64012a85}\label{employee__personal__dtl__management_8c_a37a7c15368c6ad8e3dfde25f64012a85}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!raise\_grievances@{raise\_grievances}}
+\index{raise\_grievances@{raise\_grievances}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{raise\_grievances()}{raise\_grievances()}}
+{\footnotesize\ttfamily char$\ast$ raise\+\_\+grievances (\begin{DoxyParamCaption}\item[{int}]{e\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Raise grievances or complaints aginst others by Admin,Manager and E\+Mployee. 
+
+It will raise a grievance or complaints against each other by Admin, Manager and Employee. User want to be anonymous, then emp\+\_\+id is not inserted in the database. Description can be provided upto 200 characters for the grievances redressal.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & emp\+\_\+id\+: Employee ID of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User Type\+: Grivance Raised\+: For positive case No Record found\+: For not finding the employee in the database Not connected or Failed to execute the query\+: For failure with the database 
+\end{DoxyReturn}
+Query\+: Insert into \char`\"{}grievances\char`\"{} table according to auto-\/generated response number It will add emp\+\_\+id in the database by asking the permission from the userHere is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{employee__personal__dtl__management_8c_a37a7c15368c6ad8e3dfde25f64012a85_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__personal__dtl__management_8c_a37a7c15368c6ad8e3dfde25f64012a85_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_a6347d64cacde5357741c209f6e4ab82e}\label{employee__personal__dtl__management_8c_a6347d64cacde5357741c209f6e4ab82e}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!update\_employee@{update\_employee}}
+\index{update\_employee@{update\_employee}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{update\_employee()}{update\_employee()}}
+{\footnotesize\ttfamily char$\ast$ update\+\_\+employee (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Access the database for their details to be modified by the employee. 
+
+The details of the employees can be modified by calling this function Use \char`\"{}emp\+\_\+detail\char`\"{} table to fetch and modify the records
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & emp\+\_\+id\+: Employee ID of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User Type\+: User modified successfully\+: For positive case Not connected \+: Fail to establish the connection with database Failed to execute the query\+: Connection problem for execution of the query 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__personal__dtl__management_8c_a6347d64cacde5357741c209f6e4ab82e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__personal__dtl__management_8c_a6347d64cacde5357741c209f6e4ab82e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_ab2944961bf4c446f74bbe998397dda83}\label{employee__personal__dtl__management_8c_ab2944961bf4c446f74bbe998397dda83}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!view\_raised\_grievances@{view\_raised\_grievances}}
+\index{view\_raised\_grievances@{view\_raised\_grievances}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{view\_raised\_grievances()}{view\_raised\_grievances()}}
+{\footnotesize\ttfamily char$\ast$ view\+\_\+raised\+\_\+grievances (\begin{DoxyParamCaption}\item[{int}]{choice,  }\item[{int}]{gri\+\_\+choice }\end{DoxyParamCaption})}
+
+
+
+Access the database to display the raised grievances by the users. 
+
+It will display the raised grievances by the users. Admin,Manager,Employee have the option to view the grievances by employee id or see all raised grievances.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & choice Intger value input from the user int gri\+\_\+chocie Integer value input as the ID of the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User Type\+: Not connected \+: Fail to establish the connection with database Failed to execute the query\+: Connection problem for execution of the query Employee ID not found or No Record with the query\+: For not finding the employee in the database Grievance Found for the employee ID or Grievance Found\+: For positive case 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__personal__dtl__management_8c_ab2944961bf4c446f74bbe998397dda83_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_a9ccff4eb02e1f2ce57d9dca576ba9d35}\label{employee__personal__dtl__management_8c_a9ccff4eb02e1f2ce57d9dca576ba9d35}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!conn3@{conn3}}
+\index{conn3@{conn3}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn3}{conn3}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ conn3}
+
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_ac54480eb257b70851bbeca50248b8197}\label{employee__personal__dtl__management_8c_ac54480eb257b70851bbeca50248b8197}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!conn8@{conn8}}
+\index{conn8@{conn8}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn8}{conn8}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ conn8}
+
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_ac16351d2376ab32723d30a01ecea7f9f}\label{employee__personal__dtl__management_8c_ac16351d2376ab32723d30a01ecea7f9f}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!conn9@{conn9}}
+\index{conn9@{conn9}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn9}{conn9}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ conn9}
+
+\mbox{\Hypertarget{employee__personal__dtl__management_8c_a667ad2b0ce399a421df1996983cc3269}\label{employee__personal__dtl__management_8c_a667ad2b0ce399a421df1996983cc3269}} 
+\index{employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}!port7@{port7}}
+\index{port7@{port7}!employee\_personal\_dtl\_management.c@{employee\_personal\_dtl\_management.c}}
+\doxysubsubsection{\texorpdfstring{port7}{port7}}
+{\footnotesize\ttfamily int port7 =3306}
+

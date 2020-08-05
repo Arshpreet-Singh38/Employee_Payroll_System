@@ -1,0 +1,30 @@
+<map id="add_employee_department" name="add_employee_department">
+<area shape="rect" id="node1" title="Add the employees by the admin in the department as requested in the employee request by manager." alt="" coords="5,284,184,311"/>
+<area shape="rect" id="node2" href="$employee__management_8c.html#a4deff038da64e7ead8470e2871dff128" title="Allows the admin to add a new employee in the database." alt="" coords="232,284,339,311"/>
+<area shape="rect" id="node3" href="$salary__management_8c.html#ab30d7b9e57d1c383eb718e722f8d65c1" title=" " alt="" coords="387,5,472,32"/>
+<area shape="rect" id="node4" href="$_validation_8c.html#a16d7f66201af135f0e60ffc6ac3cbd18" title="Validating the date,month and year." alt="" coords="393,56,465,83"/>
+<area shape="rect" id="node6" href="$employee_8c.html#a2b298dd5c9c227ae010b9a65fec71715" title="Basically call the function from this main function." alt="" coords="390,461,469,488"/>
+<area shape="rect" id="node15" href="$_validation_8c.html#a41a17a1b0e1193a6527547bc81dd9080" title="Validating that string is empty or not." alt="" coords="973,335,1049,361"/>
+<area shape="rect" id="node24" href="$_validation_8c.html#a3b3f4c2e58ff48da389b53b28a3548d2" title="Validating the given string." alt="" coords="968,689,1053,716"/>
+<area shape="rect" id="node25" href="$_validation_8c.html#abe0a185859fac04fb0b08df384b15cf7" title="Validating the Phone number." alt="" coords="966,740,1055,767"/>
+<area shape="rect" id="node5" href="$_validation_8c.html#aa7c6f8a683bed908987c7d07304623f8" title="Validating the year as leap or not." alt="" coords="571,56,627,83"/>
+<area shape="rect" id="node7" href="$employee__management_8c.html#acb2e951c1954f4027b15b075d54f4c53" title="Display the leave details of the user (Admin,Employee,Manager)." alt="" coords="546,411,653,437"/>
+<area shape="rect" id="node8" href="$employee_8c.html#a45ac57781e058f82ff9ea6e93b6f5277" title="Display salary with the Employee ID." alt="" coords="547,563,652,589"/>
+<area shape="rect" id="node9" href="$employee__attdnce__management_8c.html#a974d072803a1ac834a7031b4eb6b33cc" title="attendance management takes 1 argument." alt="" coords="520,309,679,336"/>
+<area shape="rect" id="node18" href="$employee__personal__dtl__management_8c.html#aab11849fbd26ca8ce98aabc04a1b8f08" title="Create connection and basically calls the function from here." alt="" coords="537,613,662,640"/>
+<area shape="rect" id="node26" href="$leave__request_8c.html#aae90fd3e18df10e9a4f25ff71d3553c5" title="Allow the users to raise a leave request." alt="" coords="549,512,650,539"/>
+<area shape="rect" id="node27" href="$employee__personal__dtl__management_8c.html#a37a7c15368c6ad8e3dfde25f64012a85" title="Raise grievances or complaints aginst others by Admin,Manager and EMployee." alt="" coords="540,461,659,488"/>
+<area shape="rect" id="node28" href="$employee__personal__dtl__management_8c.html#ab2944961bf4c446f74bbe998397dda83" title="Access the database to display the raised grievances by the users." alt="" coords="521,360,677,387"/>
+<area shape="rect" id="node10" href="$employee__attdnce__management_8c.html#aa0712136e81ce7ce66087f94ee484c98" title="attendance change function takes 5 arguments." alt="" coords="739,157,873,184"/>
+<area shape="rect" id="node12" href="$_validation_8c.html#a279666b874e36a99e3e1b713535c07f3" title="Validating empType Salaried or Hourly." alt="" coords="753,208,859,235"/>
+<area shape="rect" id="node13" href="$attendance__display_8c.html#a2e8b07ee7dce7c31811c48724124be9e" title="View the attendance for hourly employees." alt="" coords="727,360,885,387"/>
+<area shape="rect" id="node16" href="$employee__attdnce__management_8c.html#a5c1c1986deb9e33779631af6fb852368" title="reuest_status takes 1 argument." alt="" coords="755,309,857,336"/>
+<area shape="rect" id="node17" href="$attendance__display_8c.html#a0fee0bbf0bd0dabdb34a069d8249583a" title="View the attendance for salaried employees." alt="" coords="747,461,865,488"/>
+<area shape="rect" id="node11" href="$_validation_8c.html#a49318cdd5502a471c9bbe23dad46a4db" title="Validating the current month." alt="" coords="933,157,1088,184"/>
+<area shape="rect" id="node14" href="$_validation_8c.html#aad0e0d513f76295005bffda6a837e8ca" title="Validating the current date." alt="" coords="962,461,1059,488"/>
+<area shape="rect" id="node19" href="$employee_8c.html#a73be806440a7e65d401c7faa13314ec7" title="Change the password of the user." alt="" coords="743,563,869,589"/>
+<area shape="rect" id="node22" href="$employee__personal__dtl__management_8c.html#afbd1bf8428574eac0e3a329a0a88d362" title="Access the database and display the details of the employee." alt="" coords="759,613,853,640"/>
+<area shape="rect" id="node23" href="$employee__personal__dtl__management_8c.html#a6347d64cacde5357741c209f6e4ab82e" title="Access the database for their details to be modified by the employee." alt="" coords="744,664,868,691"/>
+<area shape="rect" id="node20" href="$employee_8c.html#a8f65fa5624451cef522c515c05d6be65" title="Change password of the user." alt="" coords="961,537,1060,564"/>
+<area shape="rect" id="node21" href="$employee_8c.html#af5978fab9fa6dd4ced1c3a8ab1251f7b" title="Get or scan the value from the console screen." alt="" coords="983,588,1038,615"/>
+</map>

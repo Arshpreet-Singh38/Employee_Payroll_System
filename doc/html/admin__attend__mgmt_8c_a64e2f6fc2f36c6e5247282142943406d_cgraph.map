@@ -1,0 +1,15 @@
+<map id="attend_mgmt" name="attend_mgmt">
+<area shape="rect" id="node1" title="Attendance Management and calls the function from this function." alt="" coords="5,157,104,184"/>
+<area shape="rect" id="node2" href="$admin__attend__mgmt_8c.html#ac138eba1507443b2ad38f5046d24f7f3" title="Add the attendance of the user." alt="" coords="174,5,289,32"/>
+<area shape="rect" id="node8" href="$_validation_8c.html#a279666b874e36a99e3e1b713535c07f3" title="Validating empType Salaried or Hourly." alt="" coords="178,309,285,336"/>
+<area shape="rect" id="node9" href="$admin__attend__mgmt_8c.html#a3b91fdefb5f5cdf7e785feeb24c843a5" title="Add the attendance of the employees." alt="" coords="167,157,295,184"/>
+<area shape="rect" id="node10" href="$attendance__display_8c.html#a2e8b07ee7dce7c31811c48724124be9e" title="View the attendance for hourly employees." alt="" coords="152,208,311,235"/>
+<area shape="rect" id="node11" href="$admin__attend__mgmt_8c.html#ac954558374aa1d041896a8d6ad7fb617" title="Add the new_month for attendance of the user." alt="" coords="187,259,275,285"/>
+<area shape="rect" id="node12" href="$admin__attend__mgmt_8c.html#a05be99a37dcbc824a657fe08afa55a10" title="Update the attendance of the user." alt="" coords="165,56,297,83"/>
+<area shape="rect" id="node13" href="$attendance__display_8c.html#a0fee0bbf0bd0dabdb34a069d8249583a" title="View the attendance for salaried employees." alt="" coords="173,107,290,133"/>
+<area shape="rect" id="node3" href="$admin__attend__mgmt_8c.html#a4757b9e47ec9662432e9b196d85026dc" title="Month availability before inserting attendance." alt="" coords="359,5,553,32"/>
+<area shape="rect" id="node4" href="$_validation_8c.html#a98f7cea390f8c27a349f27fa8374956e" title="Validating the attendance." alt="" coords="388,56,524,83"/>
+<area shape="rect" id="node7" href="$_validation_8c.html#aad0e0d513f76295005bffda6a837e8ca" title="Validating the current date." alt="" coords="407,132,505,159"/>
+<area shape="rect" id="node5" href="$_validation_8c.html#a11758def6b67ad1ce202168f84bcf7b8" title="check the availability of leaves in the database for the particular year" alt="" coords="601,31,695,57"/>
+<area shape="rect" id="node6" href="$_validation_8c.html#acdfc0f8ee81107535c88f945cbfeb305" title="Removes the extra spacing." alt="" coords="624,81,672,108"/>
+</map>

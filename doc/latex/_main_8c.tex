@@ -1,0 +1,144 @@
+\hypertarget{_main_8c}{}\doxysection{Main.\+c File Reference}
+\label{_main_8c}\index{Main.c@{Main.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}employee\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}employee.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}manager\+\_\+dept\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}employee\+\_\+personal\+\_\+dtl\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}validation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}attendance\+\_\+display.\+h\char`\"{}}\newline
+Include dependency graph for Main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{_main_8c_aebb5132e49ed5f6fe146571310f57b2b}{login}} (int id, char pwd\mbox{[}25\mbox{]})
+\begin{DoxyCompactList}\small\item\em Checks the login credentials from database to assign the user type\+: Admin,Employee,Manager. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em The main function which distributes various tasks to other functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{_main_8c_af5935f3403aebcc741ae1f888693e759}{oo}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{_main_8c_ac57b42552da0a61e0247756f1d266771}{conn}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{_main_8c_adaf0f67ffe219d6c57b4e19139fc179e}{conn4}}
+\item 
+M\+Y\+S\+Q\+L\+\_\+\+R\+ES $\ast$ \mbox{\hyperlink{_main_8c_a1abcd81b67d461c6344dcda56051596c}{read1}} =N\+U\+LL
+\item 
+M\+Y\+S\+Q\+L\+\_\+\+R\+ES $\ast$ \mbox{\hyperlink{_main_8c_a4b9aff964cf7b4d0491357aaab5edc31}{res}} =N\+U\+LL
+\item 
+M\+Y\+S\+Q\+L\+\_\+\+R\+OW \mbox{\hyperlink{_main_8c_a34269e7c6df16f7d1b6034b9fce28463}{row}} =N\+U\+LL
+\item 
+int \mbox{\hyperlink{_main_8c_a6f3fde35c9eadb3c18a1a533af9e6ca0}{port8}} =3306
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains the main function from which different functions located in other files are called to perform different tasks assigned for admin,employee and manager based on the user inputs. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_main_8c_aebb5132e49ed5f6fe146571310f57b2b}\label{_main_8c_aebb5132e49ed5f6fe146571310f57b2b}} 
+\index{Main.c@{Main.c}!login@{login}}
+\index{login@{login}!Main.c@{Main.c}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily char $\ast$ login (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{char}]{pwd\mbox{[}25\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Checks the login credentials from database to assign the user type\+: Admin,Employee,Manager. 
+
+Accesses the login\+\_\+details table from database and matches login credentials provided by the user corresponding to the data entry in the database
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & Unique login id for the user \\
+\hline
+\mbox{\texttt{ in}}  & {\em pwd} & Password for the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: admin,employee or manager for successful login Wrong username/password for incorrect login credentials User deactivated if the user is deactivated in database 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{_main_8c_aebb5132e49ed5f6fe146571310f57b2b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{_main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{Main.c@{Main.c}!main@{main}}
+\index{main@{main}!Main.c@{Main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+The main function which distributes various tasks to other functions. 
+
+Expects a user type from the login function Based on the functionalities provided for the user type and corresponding user inputs calls the other functions. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_main_8c_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_main_8c_ac57b42552da0a61e0247756f1d266771}\label{_main_8c_ac57b42552da0a61e0247756f1d266771}} 
+\index{Main.c@{Main.c}!conn@{conn}}
+\index{conn@{conn}!Main.c@{Main.c}}
+\doxysubsubsection{\texorpdfstring{conn}{conn}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ conn}
+
+\mbox{\Hypertarget{_main_8c_adaf0f67ffe219d6c57b4e19139fc179e}\label{_main_8c_adaf0f67ffe219d6c57b4e19139fc179e}} 
+\index{Main.c@{Main.c}!conn4@{conn4}}
+\index{conn4@{conn4}!Main.c@{Main.c}}
+\doxysubsubsection{\texorpdfstring{conn4}{conn4}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ conn4}
+
+\mbox{\Hypertarget{_main_8c_af5935f3403aebcc741ae1f888693e759}\label{_main_8c_af5935f3403aebcc741ae1f888693e759}} 
+\index{Main.c@{Main.c}!oo@{oo}}
+\index{oo@{oo}!Main.c@{Main.c}}
+\doxysubsubsection{\texorpdfstring{oo}{oo}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ oo}
+
+\mbox{\Hypertarget{_main_8c_a6f3fde35c9eadb3c18a1a533af9e6ca0}\label{_main_8c_a6f3fde35c9eadb3c18a1a533af9e6ca0}} 
+\index{Main.c@{Main.c}!port8@{port8}}
+\index{port8@{port8}!Main.c@{Main.c}}
+\doxysubsubsection{\texorpdfstring{port8}{port8}}
+{\footnotesize\ttfamily int port8 =3306}
+
+\mbox{\Hypertarget{_main_8c_a1abcd81b67d461c6344dcda56051596c}\label{_main_8c_a1abcd81b67d461c6344dcda56051596c}} 
+\index{Main.c@{Main.c}!read1@{read1}}
+\index{read1@{read1}!Main.c@{Main.c}}
+\doxysubsubsection{\texorpdfstring{read1}{read1}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+ES$\ast$ read1 =N\+U\+LL}
+
+\mbox{\Hypertarget{_main_8c_a4b9aff964cf7b4d0491357aaab5edc31}\label{_main_8c_a4b9aff964cf7b4d0491357aaab5edc31}} 
+\index{Main.c@{Main.c}!res@{res}}
+\index{res@{res}!Main.c@{Main.c}}
+\doxysubsubsection{\texorpdfstring{res}{res}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+ES$\ast$ res =N\+U\+LL}
+
+\mbox{\Hypertarget{_main_8c_a34269e7c6df16f7d1b6034b9fce28463}\label{_main_8c_a34269e7c6df16f7d1b6034b9fce28463}} 
+\index{Main.c@{Main.c}!row@{row}}
+\index{row@{row}!Main.c@{Main.c}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily M\+Y\+S\+Q\+L\+\_\+\+R\+OW row =N\+U\+LL}
+

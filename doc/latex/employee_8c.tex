@@ -1,0 +1,274 @@
+\hypertarget{employee_8c}{}\doxysection{employee.\+c File Reference}
+\label{employee_8c}\index{employee.c@{employee.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}employee\+\_\+personal\+\_\+dtl\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}employee.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}admin\+\_\+attendance.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}employee\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}validation.\+h\char`\"{}}\newline
+Include dependency graph for employee.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{employee_8c_a59bcbb5f6896e44dfd79fa63508cfec3}{M\+A\+X\+\_\+\+Y\+E\+AR}}~2020
+\item 
+\#define \mbox{\hyperlink{employee_8c_a66979cc5bd82220ee4c973b4bcb36f10}{M\+I\+N\+\_\+\+Y\+E\+AR}}~2010
+\item 
+\#define \mbox{\hyperlink{employee_8c_a61d0d319cb00c61aaaee21009da3157c}{M\+A\+X\+\_\+\+M\+O\+N\+TH}}~12
+\item 
+\#define \mbox{\hyperlink{employee_8c_ac94fbf390c2a9532433d9d631abfe14f}{M\+I\+N\+\_\+\+M\+O\+N\+TH}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{employee_8c_af5978fab9fa6dd4ced1c3a8ab1251f7b}{getch}} (void)
+\begin{DoxyCompactList}\small\item\em Get or scan the value from the console screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{employee_8c_a45ac57781e058f82ff9ea6e93b6f5277}{display\+\_\+salary}} (int emp\+\_\+id, int option)
+\begin{DoxyCompactList}\small\item\em Display salary with the Employee ID. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{employee_8c_a8f65fa5624451cef522c515c05d6be65}{change\+\_\+pass}} (int emp\+\_\+id, char new\+\_\+pass\mbox{[}45\mbox{]}, char confirm\+\_\+pass\mbox{[}45\mbox{]}, char old\+\_\+pass\mbox{[}45\mbox{]})
+\begin{DoxyCompactList}\small\item\em Change password of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{employee_8c_a73be806440a7e65d401c7faa13314ec7}{change\+\_\+password}} (int id)
+\begin{DoxyCompactList}\small\item\em Change the password of the user. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{employee_8c_a2b298dd5c9c227ae010b9a65fec71715}{employee}} (int emp\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Basically call the function from this main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee_8c_a052efb23fddda7e16d53772256c142a4}{conn2}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee_8c_a8b3a170abed4b2e5a4e7212309ef908d}{oo}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee_8c_ac57b42552da0a61e0247756f1d266771}{conn}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee_8c_adaf0f67ffe219d6c57b4e19139fc179e}{conn4}}
+\item 
+int \mbox{\hyperlink{employee_8c_a5a9170f9e74e053deacb75d7e3a22b83}{port4}} =3306
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Perform the functions who is login with employee crendentials 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{employee_8c_a61d0d319cb00c61aaaee21009da3157c}\label{employee_8c_a61d0d319cb00c61aaaee21009da3157c}} 
+\index{employee.c@{employee.c}!MAX\_MONTH@{MAX\_MONTH}}
+\index{MAX\_MONTH@{MAX\_MONTH}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_MONTH}{MAX\_MONTH}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+M\+O\+N\+TH~12}
+
+\mbox{\Hypertarget{employee_8c_a59bcbb5f6896e44dfd79fa63508cfec3}\label{employee_8c_a59bcbb5f6896e44dfd79fa63508cfec3}} 
+\index{employee.c@{employee.c}!MAX\_YEAR@{MAX\_YEAR}}
+\index{MAX\_YEAR@{MAX\_YEAR}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_YEAR}{MAX\_YEAR}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+Y\+E\+AR~2020}
+
+\mbox{\Hypertarget{employee_8c_ac94fbf390c2a9532433d9d631abfe14f}\label{employee_8c_ac94fbf390c2a9532433d9d631abfe14f}} 
+\index{employee.c@{employee.c}!MIN\_MONTH@{MIN\_MONTH}}
+\index{MIN\_MONTH@{MIN\_MONTH}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{MIN\_MONTH}{MIN\_MONTH}}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+M\+O\+N\+TH~1}
+
+\mbox{\Hypertarget{employee_8c_a66979cc5bd82220ee4c973b4bcb36f10}\label{employee_8c_a66979cc5bd82220ee4c973b4bcb36f10}} 
+\index{employee.c@{employee.c}!MIN\_YEAR@{MIN\_YEAR}}
+\index{MIN\_YEAR@{MIN\_YEAR}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{MIN\_YEAR}{MIN\_YEAR}}
+{\footnotesize\ttfamily \#define M\+I\+N\+\_\+\+Y\+E\+AR~2010}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{employee_8c_a8f65fa5624451cef522c515c05d6be65}\label{employee_8c_a8f65fa5624451cef522c515c05d6be65}} 
+\index{employee.c@{employee.c}!change\_pass@{change\_pass}}
+\index{change\_pass@{change\_pass}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{change\_pass()}{change\_pass()}}
+{\footnotesize\ttfamily char$\ast$ change\+\_\+pass (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id,  }\item[{char}]{new\+\_\+pass\mbox{[}45\mbox{]},  }\item[{char}]{confirm\+\_\+pass\mbox{[}45\mbox{]},  }\item[{char}]{old\+\_\+pass\mbox{[}45\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Change password of the user. 
+
+Change the password when user called this function
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & emp\+\_\+id Integer value for Employee ID char new\+\_\+pass\mbox{[}45\mbox{]} Array of characters of length 45 char confirm\+\_\+pass\mbox{[}45\mbox{]} Array of characters of length 45 char old\+\_\+passs\mbox{[}45\mbox{]} Array of characters of length 45\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string message change password status 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee_8c_a8f65fa5624451cef522c515c05d6be65_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee_8c_a73be806440a7e65d401c7faa13314ec7}\label{employee_8c_a73be806440a7e65d401c7faa13314ec7}} 
+\index{employee.c@{employee.c}!change\_password@{change\_password}}
+\index{change\_password@{change\_password}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{change\_password()}{change\_password()}}
+{\footnotesize\ttfamily void change\+\_\+password (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Change the password of the user. 
+
+Change the password of the user
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & id Integer value given by the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing because the data retrieved from the database is printing on the console screen. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{employee_8c_a73be806440a7e65d401c7faa13314ec7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee_8c_a73be806440a7e65d401c7faa13314ec7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee_8c_a45ac57781e058f82ff9ea6e93b6f5277}\label{employee_8c_a45ac57781e058f82ff9ea6e93b6f5277}} 
+\index{employee.c@{employee.c}!display\_salary@{display\_salary}}
+\index{display\_salary@{display\_salary}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{display\_salary()}{display\_salary()}}
+{\footnotesize\ttfamily int display\+\_\+salary (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id,  }\item[{int}]{option }\end{DoxyParamCaption})}
+
+
+
+Display salary with the Employee ID. 
+
+It will display the salary for the employee ID
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & emp\+\_\+id Integer value is passed of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: 0\+: Negative or Wrong value 1\+: Positiveor Successful Value 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee_8c_a45ac57781e058f82ff9ea6e93b6f5277_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee_8c_a2b298dd5c9c227ae010b9a65fec71715}\label{employee_8c_a2b298dd5c9c227ae010b9a65fec71715}} 
+\index{employee.c@{employee.c}!employee@{employee}}
+\index{employee@{employee}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{employee()}{employee()}}
+{\footnotesize\ttfamily int employee (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Basically call the function from this main function. 
+
+It is the main function where other functions are called to perform the actions accordingly
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & emp\+\_\+id\+: Employee ID for the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing because every functions is handled internally 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee_8c_a2b298dd5c9c227ae010b9a65fec71715_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee_8c_a2b298dd5c9c227ae010b9a65fec71715_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee_8c_af5978fab9fa6dd4ced1c3a8ab1251f7b}\label{employee_8c_af5978fab9fa6dd4ced1c3a8ab1251f7b}} 
+\index{employee.c@{employee.c}!getch@{getch}}
+\index{getch@{getch}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{getch()}{getch()}}
+{\footnotesize\ttfamily int getch (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get or scan the value from the console screen. 
+
+Function can be called for any type of user-\/$>$ Admin, Manager, Employee who want to scan the values from console screeen
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}void\mbox{]}} & No Arguments will be passed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: Integer value \textquotesingle{}ch\textquotesingle{} for all case 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee_8c_af5978fab9fa6dd4ced1c3a8ab1251f7b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{employee_8c_ac57b42552da0a61e0247756f1d266771}\label{employee_8c_ac57b42552da0a61e0247756f1d266771}} 
+\index{employee.c@{employee.c}!conn@{conn}}
+\index{conn@{conn}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{conn}{conn}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ conn}
+
+\mbox{\Hypertarget{employee_8c_a052efb23fddda7e16d53772256c142a4}\label{employee_8c_a052efb23fddda7e16d53772256c142a4}} 
+\index{employee.c@{employee.c}!conn2@{conn2}}
+\index{conn2@{conn2}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{conn2}{conn2}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ conn2}
+
+\mbox{\Hypertarget{employee_8c_adaf0f67ffe219d6c57b4e19139fc179e}\label{employee_8c_adaf0f67ffe219d6c57b4e19139fc179e}} 
+\index{employee.c@{employee.c}!conn4@{conn4}}
+\index{conn4@{conn4}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{conn4}{conn4}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ conn4}
+
+\mbox{\Hypertarget{employee_8c_a8b3a170abed4b2e5a4e7212309ef908d}\label{employee_8c_a8b3a170abed4b2e5a4e7212309ef908d}} 
+\index{employee.c@{employee.c}!oo@{oo}}
+\index{oo@{oo}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{oo}{oo}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ oo}
+
+\mbox{\Hypertarget{employee_8c_a5a9170f9e74e053deacb75d7e3a22b83}\label{employee_8c_a5a9170f9e74e053deacb75d7e3a22b83}} 
+\index{employee.c@{employee.c}!port4@{port4}}
+\index{port4@{port4}!employee.c@{employee.c}}
+\doxysubsubsection{\texorpdfstring{port4}{port4}}
+{\footnotesize\ttfamily int port4 =3306}
+

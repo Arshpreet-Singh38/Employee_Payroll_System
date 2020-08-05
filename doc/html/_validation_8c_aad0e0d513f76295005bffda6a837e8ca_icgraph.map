@@ -1,0 +1,20 @@
+<map id="validate_date" name="validate_date">
+<area shape="rect" id="node1" title="Validating the current date." alt="" coords="1220,182,1317,209"/>
+<area shape="rect" id="node2" href="$admin__attend__mgmt_8c.html#ac138eba1507443b2ad38f5046d24f7f3" title="Add the attendance of the user." alt="" coords="1035,207,1150,234"/>
+<area shape="rect" id="node5" href="$_main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="The main function which distributes various tasks to other functions." alt="" coords="5,258,56,285"/>
+<area shape="rect" id="node6" href="$admin__attend__mgmt_8c.html#a3b91fdefb5f5cdf7e785feeb24c843a5" title="Add the attendance of the employees." alt="" coords="1029,258,1157,285"/>
+<area shape="rect" id="node7" href="$attendance__display_8c.html#a2e8b07ee7dce7c31811c48724124be9e" title="View the attendance for hourly employees." alt="" coords="1013,106,1172,133"/>
+<area shape="rect" id="node15" href="$leave__request_8c.html#aae90fd3e18df10e9a4f25ff71d3553c5" title="Allow the users to raise a leave request." alt="" coords="835,359,937,386"/>
+<area shape="rect" id="node16" href="$admin__attend__mgmt_8c.html#ac954558374aa1d041896a8d6ad7fb617" title="Add the new_month for attendance of the user." alt="" coords="1049,309,1137,335"/>
+<area shape="rect" id="node17" href="$admin__attend__mgmt_8c.html#a05be99a37dcbc824a657fe08afa55a10" title="Update the attendance of the user." alt="" coords="1027,157,1159,183"/>
+<area shape="rect" id="node18" href="$attendance__display_8c.html#a0fee0bbf0bd0dabdb34a069d8249583a" title="View the attendance for salaried employees." alt="" coords="1034,55,1151,82"/>
+<area shape="rect" id="node3" href="$admin__attend__mgmt_8c.html#a64e2f6fc2f36c6e5247282142943406d" title="Attendance Management and calls the function from this function." alt="" coords="837,157,935,183"/>
+<area shape="rect" id="node4" href="$employee__management_8c.html#a456f09d016ff1aa94f56b7465f5f5400" title=" " alt="" coords="104,207,233,234"/>
+<area shape="rect" id="node8" href="$employee__attdnce__management_8c.html#a974d072803a1ac834a7031b4eb6b33cc" title="attendance management takes 1 argument." alt="" coords="807,106,965,133"/>
+<area shape="rect" id="node9" href="$employee_8c.html#a2b298dd5c9c227ae010b9a65fec71715" title="Basically call the function from this main function." alt="" coords="680,309,759,335"/>
+<area shape="rect" id="node10" href="$employee__management_8c.html#a4deff038da64e7ead8470e2871dff128" title="Allows the admin to add a new employee in the database." alt="" coords="517,258,623,285"/>
+<area shape="rect" id="node12" href="$employee__management_8c.html#a5661239612b41efda60e01c330de8145" title="Allows the admin to modify employee details." alt="" coords="309,157,432,183"/>
+<area shape="rect" id="node13" href="$employee__personal__dtl__management_8c.html#a6347d64cacde5357741c209f6e4ab82e" title="Access the database for their details to be modified by the employee." alt="" coords="508,359,632,386"/>
+<area shape="rect" id="node11" href="$admin__dept__management_8c.html#a2e41248091dce857522c62f5c365d035" title="Add the employees by the admin in the department as requested in the employee request by manager." alt="" coords="281,207,460,234"/>
+<area shape="rect" id="node14" href="$employee__personal__dtl__management_8c.html#aab11849fbd26ca8ce98aabc04a1b8f08" title="Create connection and basically calls the function from here." alt="" coords="308,410,433,437"/>
+</map>

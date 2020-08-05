@@ -1,0 +1,121 @@
+\hypertarget{admin__dept__management_8c}{}\doxysection{admin\+\_\+dept\+\_\+management.\+c File Reference}
+\label{admin__dept__management_8c}\index{admin\_dept\_management.c@{admin\_dept\_management.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}validation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}employee\+\_\+management.\+h\char`\"{}}\newline
+Include dependency graph for admin\+\_\+dept\+\_\+management.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__dept__management_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{admin__dept__management_8c_ae10129a63e057e21927cb021e2a8225c}{view\+\_\+pending\+\_\+requests}} (char status\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em View the pending employee requests raised by the managers to perform actions by the admin. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{admin__dept__management_8c_a2e41248091dce857522c62f5c365d035}{add\+\_\+employee\+\_\+department}} (int request\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Add the employees by the admin in the department as requested in the employee request by manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{admin__dept__management_8c_a379d4c2ef2bdf1f30eff577f3f4dc710}{conn5}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{admin__dept__management_8c_afae9830d17ef73a2a287a959e0a9d4f5}{conn2}}
+\item 
+int \mbox{\hyperlink{admin__dept__management_8c_a1e3dfcf37b999c3b47da3624a294bcd2}{port2}} =3306
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides the department functionality to the admin Admin can view pending employee requests raised by the manager and take decision accordingly 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{admin__dept__management_8c_a2e41248091dce857522c62f5c365d035}\label{admin__dept__management_8c_a2e41248091dce857522c62f5c365d035}} 
+\index{admin\_dept\_management.c@{admin\_dept\_management.c}!add\_employee\_department@{add\_employee\_department}}
+\index{add\_employee\_department@{add\_employee\_department}!admin\_dept\_management.c@{admin\_dept\_management.c}}
+\doxysubsubsection{\texorpdfstring{add\_employee\_department()}{add\_employee\_department()}}
+{\footnotesize\ttfamily char $\ast$ add\+\_\+employee\+\_\+department (\begin{DoxyParamCaption}\item[{int}]{request\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Add the employees by the admin in the department as requested in the employee request by manager. 
+
+Admin can access the database and can add employee in the department requested by Manager The department and designation will correspond to the request that was raised by manager
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & request\+\_\+id Unique request ID corresponding to the employee request raised by the manager\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string message for confirmation 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__dept__management_8c_a2e41248091dce857522c62f5c365d035_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__dept__management_8c_a2e41248091dce857522c62f5c365d035_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{admin__dept__management_8c_ae10129a63e057e21927cb021e2a8225c}\label{admin__dept__management_8c_ae10129a63e057e21927cb021e2a8225c}} 
+\index{admin\_dept\_management.c@{admin\_dept\_management.c}!view\_pending\_requests@{view\_pending\_requests}}
+\index{view\_pending\_requests@{view\_pending\_requests}!admin\_dept\_management.c@{admin\_dept\_management.c}}
+\doxysubsubsection{\texorpdfstring{view\_pending\_requests()}{view\_pending\_requests()}}
+{\footnotesize\ttfamily char $\ast$ view\+\_\+pending\+\_\+requests (\begin{DoxyParamCaption}\item[{char}]{status\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+View the pending employee requests raised by the managers to perform actions by the admin. 
+
+Admin can access the database and view the employee requests raised by Manager
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & status\mbox{[}\mbox{]} status of the pending employee requests\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string message for request display status 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admin__dept__management_8c_ae10129a63e057e21927cb021e2a8225c_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{admin__dept__management_8c_afae9830d17ef73a2a287a959e0a9d4f5}\label{admin__dept__management_8c_afae9830d17ef73a2a287a959e0a9d4f5}} 
+\index{admin\_dept\_management.c@{admin\_dept\_management.c}!conn2@{conn2}}
+\index{conn2@{conn2}!admin\_dept\_management.c@{admin\_dept\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn2}{conn2}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ conn2}
+
+\mbox{\Hypertarget{admin__dept__management_8c_a379d4c2ef2bdf1f30eff577f3f4dc710}\label{admin__dept__management_8c_a379d4c2ef2bdf1f30eff577f3f4dc710}} 
+\index{admin\_dept\_management.c@{admin\_dept\_management.c}!conn5@{conn5}}
+\index{conn5@{conn5}!admin\_dept\_management.c@{admin\_dept\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn5}{conn5}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ conn5}
+
+\mbox{\Hypertarget{admin__dept__management_8c_a1e3dfcf37b999c3b47da3624a294bcd2}\label{admin__dept__management_8c_a1e3dfcf37b999c3b47da3624a294bcd2}} 
+\index{admin\_dept\_management.c@{admin\_dept\_management.c}!port2@{port2}}
+\index{port2@{port2}!admin\_dept\_management.c@{admin\_dept\_management.c}}
+\doxysubsubsection{\texorpdfstring{port2}{port2}}
+{\footnotesize\ttfamily int port2 =3306}
+

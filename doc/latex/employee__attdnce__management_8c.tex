@@ -1,0 +1,149 @@
+\hypertarget{employee__attdnce__management_8c}{}\doxysection{employee\+\_\+attdnce\+\_\+management.\+c File Reference}
+\label{employee__attdnce__management_8c}\index{employee\_attdnce\_management.c@{employee\_attdnce\_management.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}validation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}attendance\+\_\+display.\+h\char`\"{}}\newline
+Include dependency graph for employee\+\_\+attdnce\+\_\+management.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__attdnce__management_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{employee__attdnce__management_8c_aa0712136e81ce7ce66087f94ee484c98}{attendance\+\_\+change}} (int emp\+\_\+id, int dd, int mm, int yy, char description\mbox{[}200\mbox{]})
+\begin{DoxyCompactList}\small\item\em attendance change function takes 5 arguments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{employee__attdnce__management_8c_a5c1c1986deb9e33779631af6fb852368}{reuest\+\_\+status}} (int emp\+\_\+id)
+\begin{DoxyCompactList}\small\item\em reuest\+\_\+status takes 1 argument. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{employee__attdnce__management_8c_a974d072803a1ac834a7031b4eb6b33cc}{emp\+\_\+attendance\+\_\+mgmt}} (int emp\+\_\+id)
+\begin{DoxyCompactList}\small\item\em attendance management takes 1 argument. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{employee__attdnce__management_8c_a9ccff4eb02e1f2ce57d9dca576ba9d35}{conn3}}
+\item 
+int \mbox{\hyperlink{employee__attdnce__management_8c_aec34b85ac2277aa454634761c02c56eb}{port5}} =3306
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Various attendance management functions for the user present in this file 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{employee__attdnce__management_8c_aa0712136e81ce7ce66087f94ee484c98}\label{employee__attdnce__management_8c_aa0712136e81ce7ce66087f94ee484c98}} 
+\index{employee\_attdnce\_management.c@{employee\_attdnce\_management.c}!attendance\_change@{attendance\_change}}
+\index{attendance\_change@{attendance\_change}!employee\_attdnce\_management.c@{employee\_attdnce\_management.c}}
+\doxysubsubsection{\texorpdfstring{attendance\_change()}{attendance\_change()}}
+{\footnotesize\ttfamily char$\ast$ attendance\+\_\+change (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id,  }\item[{int}]{dd,  }\item[{int}]{mm,  }\item[{int}]{yy,  }\item[{char}]{description\mbox{[}200\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+attendance change function takes 5 arguments. 
+
+User can raise attendance request if he finds any problem
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em emp\+\_\+id} & employee id who logged in \\
+\hline
+\mbox{\texttt{ in}}  & {\em dd} & day of date \\
+\hline
+\mbox{\texttt{ in}}  & {\em mm} & month of date \\
+\hline
+\mbox{\texttt{ in}}  & {\em yy} & year of date \\
+\hline
+\mbox{\texttt{ in}}  & {\em description} & to write tha problem\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+invalid date, user not found, database error, request submitted 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{employee__attdnce__management_8c_aa0712136e81ce7ce66087f94ee484c98_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__attdnce__management_8c_aa0712136e81ce7ce66087f94ee484c98_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__attdnce__management_8c_a974d072803a1ac834a7031b4eb6b33cc}\label{employee__attdnce__management_8c_a974d072803a1ac834a7031b4eb6b33cc}} 
+\index{employee\_attdnce\_management.c@{employee\_attdnce\_management.c}!emp\_attendance\_mgmt@{emp\_attendance\_mgmt}}
+\index{emp\_attendance\_mgmt@{emp\_attendance\_mgmt}!employee\_attdnce\_management.c@{employee\_attdnce\_management.c}}
+\doxysubsubsection{\texorpdfstring{emp\_attendance\_mgmt()}{emp\_attendance\_mgmt()}}
+{\footnotesize\ttfamily int emp\+\_\+attendance\+\_\+mgmt (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+attendance management takes 1 argument. 
+
+User can see various attendance management options
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em emp\+\_\+id} & employee id who logged in\\
+\hline
+\end{DoxyParams}
+\textbackslash{} redirects user to the option selected by user Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__attdnce__management_8c_a974d072803a1ac834a7031b4eb6b33cc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__attdnce__management_8c_a974d072803a1ac834a7031b4eb6b33cc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{employee__attdnce__management_8c_a5c1c1986deb9e33779631af6fb852368}\label{employee__attdnce__management_8c_a5c1c1986deb9e33779631af6fb852368}} 
+\index{employee\_attdnce\_management.c@{employee\_attdnce\_management.c}!reuest\_status@{reuest\_status}}
+\index{reuest\_status@{reuest\_status}!employee\_attdnce\_management.c@{employee\_attdnce\_management.c}}
+\doxysubsubsection{\texorpdfstring{reuest\_status()}{reuest\_status()}}
+{\footnotesize\ttfamily void reuest\+\_\+status (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+reuest\+\_\+status takes 1 argument. 
+
+User can check status of its request to change attendance
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em emp\+\_\+id} & employee id who logged in\\
+\hline
+\end{DoxyParams}
+\textbackslash{}prints request status Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{employee__attdnce__management_8c_a5c1c1986deb9e33779631af6fb852368_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{employee__attdnce__management_8c_a9ccff4eb02e1f2ce57d9dca576ba9d35}\label{employee__attdnce__management_8c_a9ccff4eb02e1f2ce57d9dca576ba9d35}} 
+\index{employee\_attdnce\_management.c@{employee\_attdnce\_management.c}!conn3@{conn3}}
+\index{conn3@{conn3}!employee\_attdnce\_management.c@{employee\_attdnce\_management.c}}
+\doxysubsubsection{\texorpdfstring{conn3}{conn3}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ conn3}
+
+\mbox{\Hypertarget{employee__attdnce__management_8c_aec34b85ac2277aa454634761c02c56eb}\label{employee__attdnce__management_8c_aec34b85ac2277aa454634761c02c56eb}} 
+\index{employee\_attdnce\_management.c@{employee\_attdnce\_management.c}!port5@{port5}}
+\index{port5@{port5}!employee\_attdnce\_management.c@{employee\_attdnce\_management.c}}
+\doxysubsubsection{\texorpdfstring{port5}{port5}}
+{\footnotesize\ttfamily int port5 =3306}
+

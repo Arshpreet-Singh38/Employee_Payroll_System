@@ -1,0 +1,200 @@
+\hypertarget{leave__request_8c}{}\doxysection{leave\+\_\+request.\+c File Reference}
+\label{leave__request_8c}\index{leave\_request.c@{leave\_request.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}validation.\+h\char`\"{}}\newline
+Include dependency graph for leave\+\_\+request.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leave__request_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{leave__request_8c_aae90fd3e18df10e9a4f25ff71d3553c5}{leave\+\_\+request}} (int emp\+\_\+id, int dd, int mm, int yy, int no\+\_\+of\+\_\+days, char leave\+\_\+type\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Allow the users to raise a leave request. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{leave__request_8c_a5ffb474d392bdc6c6c78b476e389f7f3}{view\+\_\+pending\+\_\+leave\+\_\+requests}} (char status\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Allows the admin to view all the leave requests that are still pending. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{leave__request_8c_afbcea76e0984cb5751e1323ac4ec3db1}{decision\+\_\+leave\+\_\+request}} (int req\+\_\+id, int k)
+\begin{DoxyCompactList}\small\item\em Allows the admin to take can action on pending leave requests. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{leave__request_8c_a203578d19264051c98b9cd34f62de75f}{connect7}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{leave__request_8c_a1ef2938ee2bef0035ded2cf07a06adc5}{connect8}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{leave__request_8c_a1093572885bc9f0edb489cee90154490}{connect9}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{leave__request_8c_a77f3331193bb3af49b2578d4a8e0994a}{connect10}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{leave__request_8c_ab29b78b8b3b5523f0c27d8a88cc7b560}{connect2}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{leave__request_8c_aa3f0e4c699e61ceb369ceafdd2d3511a}{connect1}}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{leave__request_8c_a5069b4ba0063a05f83eadd8dac5c0569}{connect11}}
+\item 
+int \mbox{\hyperlink{leave__request_8c_adf671c134431fd510abbea12179b03de}{port10}} =3306
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The file contains functions relating to the leave management The users can raise leave requests,the admin can view pending leave requests and take decisions on them accordingly 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{leave__request_8c_afbcea76e0984cb5751e1323ac4ec3db1}\label{leave__request_8c_afbcea76e0984cb5751e1323ac4ec3db1}} 
+\index{leave\_request.c@{leave\_request.c}!decision\_leave\_request@{decision\_leave\_request}}
+\index{decision\_leave\_request@{decision\_leave\_request}!leave\_request.c@{leave\_request.c}}
+\doxysubsubsection{\texorpdfstring{decision\_leave\_request()}{decision\_leave\_request()}}
+{\footnotesize\ttfamily char $\ast$ decision\+\_\+leave\+\_\+request (\begin{DoxyParamCaption}\item[{int}]{req\+\_\+id,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+
+
+Allows the admin to take can action on pending leave requests. 
+
+The admin can take an action on pending leave requests by specifying the request id
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & req\+\_\+id refers to the unique request id of the leave request \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & k refers to the choice of decision Approval/\+Rejection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string message confirmation for the decision taken 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leave__request_8c_afbcea76e0984cb5751e1323ac4ec3db1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{leave__request_8c_aae90fd3e18df10e9a4f25ff71d3553c5}\label{leave__request_8c_aae90fd3e18df10e9a4f25ff71d3553c5}} 
+\index{leave\_request.c@{leave\_request.c}!leave\_request@{leave\_request}}
+\index{leave\_request@{leave\_request}!leave\_request.c@{leave\_request.c}}
+\doxysubsubsection{\texorpdfstring{leave\_request()}{leave\_request()}}
+{\footnotesize\ttfamily char $\ast$ leave\+\_\+request (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id,  }\item[{int}]{dd,  }\item[{int}]{mm,  }\item[{int}]{yy,  }\item[{int}]{no\+\_\+of\+\_\+days,  }\item[{char}]{leave\+\_\+type\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Allow the users to raise a leave request. 
+
+The user can raise a request for a planned leave for the admin to review by specifying the start date for the leave, no of days and leave request type
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & emp\+\_\+id employee id of the user who wants to raise leave request \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & dd start day for the leave request \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & mm month of the start day for the leave request \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & yy year of the start day for the leave request \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & no\+\_\+of\+\_\+days number of days for the leave required \\
+\hline
+\mbox{\texttt{ in}}  & {\em char} & leave\+\_\+type\mbox{[}\mbox{]} the type of leave required(M\+L/\+P\+L/\+L\+WP)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string message corresponding to leave request status 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{leave__request_8c_aae90fd3e18df10e9a4f25ff71d3553c5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leave__request_8c_aae90fd3e18df10e9a4f25ff71d3553c5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{leave__request_8c_a5ffb474d392bdc6c6c78b476e389f7f3}\label{leave__request_8c_a5ffb474d392bdc6c6c78b476e389f7f3}} 
+\index{leave\_request.c@{leave\_request.c}!view\_pending\_leave\_requests@{view\_pending\_leave\_requests}}
+\index{view\_pending\_leave\_requests@{view\_pending\_leave\_requests}!leave\_request.c@{leave\_request.c}}
+\doxysubsubsection{\texorpdfstring{view\_pending\_leave\_requests()}{view\_pending\_leave\_requests()}}
+{\footnotesize\ttfamily char $\ast$ view\+\_\+pending\+\_\+leave\+\_\+requests (\begin{DoxyParamCaption}\item[{char}]{status\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Allows the admin to view all the leave requests that are still pending. 
+
+The admin can view the leave requests on which no action has been taken yet.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & status\mbox{[}\mbox{]} status of the requests on which no action taken yet\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string message corresponding to display status 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{leave__request_8c_a5ffb474d392bdc6c6c78b476e389f7f3_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{leave__request_8c_aa3f0e4c699e61ceb369ceafdd2d3511a}\label{leave__request_8c_aa3f0e4c699e61ceb369ceafdd2d3511a}} 
+\index{leave\_request.c@{leave\_request.c}!connect1@{connect1}}
+\index{connect1@{connect1}!leave\_request.c@{leave\_request.c}}
+\doxysubsubsection{\texorpdfstring{connect1}{connect1}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ connect1}
+
+\mbox{\Hypertarget{leave__request_8c_a77f3331193bb3af49b2578d4a8e0994a}\label{leave__request_8c_a77f3331193bb3af49b2578d4a8e0994a}} 
+\index{leave\_request.c@{leave\_request.c}!connect10@{connect10}}
+\index{connect10@{connect10}!leave\_request.c@{leave\_request.c}}
+\doxysubsubsection{\texorpdfstring{connect10}{connect10}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ connect10}
+
+\mbox{\Hypertarget{leave__request_8c_a5069b4ba0063a05f83eadd8dac5c0569}\label{leave__request_8c_a5069b4ba0063a05f83eadd8dac5c0569}} 
+\index{leave\_request.c@{leave\_request.c}!connect11@{connect11}}
+\index{connect11@{connect11}!leave\_request.c@{leave\_request.c}}
+\doxysubsubsection{\texorpdfstring{connect11}{connect11}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ connect11}
+
+\mbox{\Hypertarget{leave__request_8c_ab29b78b8b3b5523f0c27d8a88cc7b560}\label{leave__request_8c_ab29b78b8b3b5523f0c27d8a88cc7b560}} 
+\index{leave\_request.c@{leave\_request.c}!connect2@{connect2}}
+\index{connect2@{connect2}!leave\_request.c@{leave\_request.c}}
+\doxysubsubsection{\texorpdfstring{connect2}{connect2}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ connect2}
+
+\mbox{\Hypertarget{leave__request_8c_a203578d19264051c98b9cd34f62de75f}\label{leave__request_8c_a203578d19264051c98b9cd34f62de75f}} 
+\index{leave\_request.c@{leave\_request.c}!connect7@{connect7}}
+\index{connect7@{connect7}!leave\_request.c@{leave\_request.c}}
+\doxysubsubsection{\texorpdfstring{connect7}{connect7}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ connect7}
+
+\mbox{\Hypertarget{leave__request_8c_a1ef2938ee2bef0035ded2cf07a06adc5}\label{leave__request_8c_a1ef2938ee2bef0035ded2cf07a06adc5}} 
+\index{leave\_request.c@{leave\_request.c}!connect8@{connect8}}
+\index{connect8@{connect8}!leave\_request.c@{leave\_request.c}}
+\doxysubsubsection{\texorpdfstring{connect8}{connect8}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ connect8}
+
+\mbox{\Hypertarget{leave__request_8c_a1093572885bc9f0edb489cee90154490}\label{leave__request_8c_a1093572885bc9f0edb489cee90154490}} 
+\index{leave\_request.c@{leave\_request.c}!connect9@{connect9}}
+\index{connect9@{connect9}!leave\_request.c@{leave\_request.c}}
+\doxysubsubsection{\texorpdfstring{connect9}{connect9}}
+{\footnotesize\ttfamily M\+Y\+S\+QL $\ast$ connect9}
+
+\mbox{\Hypertarget{leave__request_8c_adf671c134431fd510abbea12179b03de}\label{leave__request_8c_adf671c134431fd510abbea12179b03de}} 
+\index{leave\_request.c@{leave\_request.c}!port10@{port10}}
+\index{port10@{port10}!leave\_request.c@{leave\_request.c}}
+\doxysubsubsection{\texorpdfstring{port10}{port10}}
+{\footnotesize\ttfamily int port10 =3306}
+

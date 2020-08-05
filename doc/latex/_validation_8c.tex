@@ -1,0 +1,410 @@
+\hypertarget{_validation_8c}{}\doxysection{Validation.\+c File Reference}
+\label{_validation_8c}\index{Validation.c@{Validation.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$mysql.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}..\textbackslash{}include\textbackslash{}validation.\+h\char`\"{}}\newline
+Include dependency graph for Validation.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{_validation_8c_acdfc0f8ee81107535c88f945cbfeb305}{rtrim}} (char $\ast$s)
+\begin{DoxyCompactList}\small\item\em Removes the extra spacing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_validation_8c_a98f7cea390f8c27a349f27fa8374956e}{validate\+\_\+attendance}} (char attnd\mbox{[}4\mbox{]}, int yy, int emp\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Validating the attendance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_validation_8c_a49318cdd5502a471c9bbe23dad46a4db}{validate\+\_\+current\+\_\+month}} (int dd, int mm, int yy)
+\begin{DoxyCompactList}\small\item\em Validating the current month. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_validation_8c_aad0e0d513f76295005bffda6a837e8ca}{validate\+\_\+date}} (int dd, int mm, int yy)
+\begin{DoxyCompactList}\small\item\em Validating the current date. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_validation_8c_abe0a185859fac04fb0b08df384b15cf7}{valid\+\_\+phone}} (char phone\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Validating the Phone number. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_validation_8c_a41a17a1b0e1193a6527547bc81dd9080}{notempty}} (char num\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Validating that string is empty or not. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_validation_8c_a3b3f4c2e58ff48da389b53b28a3548d2}{valid\+\_\+email}} (char test\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Validating the given string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_validation_8c_aa7c6f8a683bed908987c7d07304623f8}{isleap}} (int y)
+\begin{DoxyCompactList}\small\item\em Validating the year as leap or not. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_validation_8c_a16d7f66201af135f0e60ffc6ac3cbd18}{datevalid}} (int d, int m, int y)
+\begin{DoxyCompactList}\small\item\em Validating the date,month and year. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_validation_8c_a279666b874e36a99e3e1b713535c07f3}{chk\+\_\+emp\+\_\+type}} (int emp\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Validating emp\+Type Salaried or Hourly. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_validation_8c_a11758def6b67ad1ce202168f84bcf7b8}{leave\+\_\+check}} (int yy, int emp\+\_\+id, char le\+\_\+type\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em check the availability of leaves in the database for the particular year \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+M\+Y\+S\+QL $\ast$ \mbox{\hyperlink{_validation_8c_a3e57c2d1f87f4fa6f70006cb340430d8}{conn9}}
+\item 
+int \mbox{\hyperlink{_validation_8c_a0601a7762b64707223d00988c6ac781f}{port9}} =3306
+\item 
+char \mbox{\hyperlink{_validation_8c_a5cc3ea59fa1a54853f37025dcf53f83d}{query}} \mbox{[}1500\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Perform the validations for most of the functions 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_validation_8c_a279666b874e36a99e3e1b713535c07f3}\label{_validation_8c_a279666b874e36a99e3e1b713535c07f3}} 
+\index{Validation.c@{Validation.c}!chk\_emp\_type@{chk\_emp\_type}}
+\index{chk\_emp\_type@{chk\_emp\_type}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{chk\_emp\_type()}{chk\_emp\_type()}}
+{\footnotesize\ttfamily int chk\+\_\+emp\+\_\+type (\begin{DoxyParamCaption}\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Validating emp\+Type Salaried or Hourly. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & temp\+\_\+id employee id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: 9\+: database error 1\+: Positive case for valid email 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c_a279666b874e36a99e3e1b713535c07f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_validation_8c_a16d7f66201af135f0e60ffc6ac3cbd18}\label{_validation_8c_a16d7f66201af135f0e60ffc6ac3cbd18}} 
+\index{Validation.c@{Validation.c}!datevalid@{datevalid}}
+\index{datevalid@{datevalid}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{datevalid()}{datevalid()}}
+{\footnotesize\ttfamily int datevalid (\begin{DoxyParamCaption}\item[{int}]{d,  }\item[{int}]{m,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Validating the date,month and year. 
+
+It will validate the dat,month and year given by the user
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & d Integer input from the user \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & m Integer input from the user \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & y Integer input from the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: 0\+: For Error of invalid input 1\+: Positive case for the value is valid 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{_validation_8c_a16d7f66201af135f0e60ffc6ac3cbd18_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c_a16d7f66201af135f0e60ffc6ac3cbd18_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_validation_8c_aa7c6f8a683bed908987c7d07304623f8}\label{_validation_8c_aa7c6f8a683bed908987c7d07304623f8}} 
+\index{Validation.c@{Validation.c}!isleap@{isleap}}
+\index{isleap@{isleap}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{isleap()}{isleap()}}
+{\footnotesize\ttfamily int isleap (\begin{DoxyParamCaption}\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Validating the year as leap or not. 
+
+Test the year for leap year or not
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & y Integer value by the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: 0\+: For Error of the invalid date 1\+: Positive case that date is valid 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c_aa7c6f8a683bed908987c7d07304623f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_validation_8c_a11758def6b67ad1ce202168f84bcf7b8}\label{_validation_8c_a11758def6b67ad1ce202168f84bcf7b8}} 
+\index{Validation.c@{Validation.c}!leave\_check@{leave\_check}}
+\index{leave\_check@{leave\_check}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{leave\_check()}{leave\_check()}}
+{\footnotesize\ttfamily int leave\+\_\+check (\begin{DoxyParamCaption}\item[{int}]{yy,  }\item[{int}]{emp\+\_\+id,  }\item[{char}]{le\+\_\+type\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+check the availability of leaves in the database for the particular year 
+
+The function checks for the availability of leaves when it sees a leave (ML,PL,L\+WP) in attendance data and deducts from the leave balance accordingly
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em yy} & year in which leave requested and balance to be checked \\
+\hline
+\mbox{\texttt{ in}}  & {\em emp\+\_\+id} & unique user id \\
+\hline
+\mbox{\texttt{ in}}  & {\em leave} & type to be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int according to the execution status 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c_a11758def6b67ad1ce202168f84bcf7b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_validation_8c_a41a17a1b0e1193a6527547bc81dd9080}\label{_validation_8c_a41a17a1b0e1193a6527547bc81dd9080}} 
+\index{Validation.c@{Validation.c}!notempty@{notempty}}
+\index{notempty@{notempty}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{notempty()}{notempty()}}
+{\footnotesize\ttfamily int notempty (\begin{DoxyParamCaption}\item[{char}]{num\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Validating that string is empty or not. 
+
+Given string by the user is validated that it is empty or not
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & num\mbox{[}\mbox{]} Array of characters given by the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: 0\+: For Error of the invalid character 1\+: Positive case for valid character 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c_a41a17a1b0e1193a6527547bc81dd9080_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_validation_8c_acdfc0f8ee81107535c88f945cbfeb305}\label{_validation_8c_acdfc0f8ee81107535c88f945cbfeb305}} 
+\index{Validation.c@{Validation.c}!rtrim@{rtrim}}
+\index{rtrim@{rtrim}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{rtrim()}{rtrim()}}
+{\footnotesize\ttfamily char$\ast$ rtrim (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+Removes the extra spacing. 
+
+It will delete or trim the extra space in the array of characters by calling this function
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & $\ast$s Array of Character Pointer, pointing to the character of size char\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: Pointer to the array of character 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c_acdfc0f8ee81107535c88f945cbfeb305_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_validation_8c_a3b3f4c2e58ff48da389b53b28a3548d2}\label{_validation_8c_a3b3f4c2e58ff48da389b53b28a3548d2}} 
+\index{Validation.c@{Validation.c}!valid\_email@{valid\_email}}
+\index{valid\_email@{valid\_email}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{valid\_email()}{valid\_email()}}
+{\footnotesize\ttfamily int valid\+\_\+email (\begin{DoxyParamCaption}\item[{char}]{test\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Validating the given string. 
+
+Given string by the user is validated that email is having with \textquotesingle{}@\textquotesingle{} and \textquotesingle{}.\textquotesingle{}
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & test\mbox{[}\mbox{]} Array of characters given by the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: 0\+: For Error of the invalid email 1\+: Positive case for valid email 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c_a3b3f4c2e58ff48da389b53b28a3548d2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_validation_8c_abe0a185859fac04fb0b08df384b15cf7}\label{_validation_8c_abe0a185859fac04fb0b08df384b15cf7}} 
+\index{Validation.c@{Validation.c}!valid\_phone@{valid\_phone}}
+\index{valid\_phone@{valid\_phone}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{valid\_phone()}{valid\_phone()}}
+{\footnotesize\ttfamily int valid\+\_\+phone (\begin{DoxyParamCaption}\item[{char}]{phone\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Validating the Phone number. 
+
+Validating the given array of character that it is of length 10 If not of length 10, gives an invalid message
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & phone\mbox{[}\mbox{]} Array of character pointers\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: 0\+: For Error of the invalid phone number 1\+: Positive case the valid phone number 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c_abe0a185859fac04fb0b08df384b15cf7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_validation_8c_a98f7cea390f8c27a349f27fa8374956e}\label{_validation_8c_a98f7cea390f8c27a349f27fa8374956e}} 
+\index{Validation.c@{Validation.c}!validate\_attendance@{validate\_attendance}}
+\index{validate\_attendance@{validate\_attendance}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{validate\_attendance()}{validate\_attendance()}}
+{\footnotesize\ttfamily int validate\+\_\+attendance (\begin{DoxyParamCaption}\item[{char}]{attnd\mbox{[}4\mbox{]},  }\item[{int}]{yy,  }\item[{int}]{emp\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Validating the attendance. 
+
+Accessing the database,and compare the string (L), (P\+HL), (ML), (PL), (L\+WP), (W\+O\+FF), (A), (P) with the fields accessed from the excel file
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em char} & attnd\mbox{[}\mbox{]} Array of Character Pointer with the capacity to store 4 elements. \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & yy Integer value for specifying the leave year \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & emp\+\_\+id Employee ID of the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: 0\+: For false Case or Error 1 or 2\+: Positive Response 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{_validation_8c_a98f7cea390f8c27a349f27fa8374956e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c_a98f7cea390f8c27a349f27fa8374956e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_validation_8c_a49318cdd5502a471c9bbe23dad46a4db}\label{_validation_8c_a49318cdd5502a471c9bbe23dad46a4db}} 
+\index{Validation.c@{Validation.c}!validate\_current\_month@{validate\_current\_month}}
+\index{validate\_current\_month@{validate\_current\_month}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{validate\_current\_month()}{validate\_current\_month()}}
+{\footnotesize\ttfamily int validate\+\_\+current\+\_\+month (\begin{DoxyParamCaption}\item[{int}]{dd,  }\item[{int}]{mm,  }\item[{int}]{yy }\end{DoxyParamCaption})}
+
+
+
+Validating the current month. 
+
+Compairing the given date,month,year by the Admin against the actual number of days in that month Month is of 29 or 30 or 31 days in the given year
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & dd Integer input from the user \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & mm Integer input from the user \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & yy Integer input from the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: 0\+: For Error of the invalid month 1\+: Positive case that month is valid 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c_a49318cdd5502a471c9bbe23dad46a4db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_validation_8c_aad0e0d513f76295005bffda6a837e8ca}\label{_validation_8c_aad0e0d513f76295005bffda6a837e8ca}} 
+\index{Validation.c@{Validation.c}!validate\_date@{validate\_date}}
+\index{validate\_date@{validate\_date}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{validate\_date()}{validate\_date()}}
+{\footnotesize\ttfamily int validate\+\_\+date (\begin{DoxyParamCaption}\item[{int}]{dd,  }\item[{int}]{mm,  }\item[{int}]{yy }\end{DoxyParamCaption})}
+
+
+
+Validating the current date. 
+
+Compairing the given date,month,year by the Admin against the actual number of days in that month Month is of 29 or 30 or 31 days in the given year
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em int} & dd Integer input from the user \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & mm Integer input from the user \\
+\hline
+\mbox{\texttt{ in}}  & {\em int} & yy Integer input from the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+User\+\_\+\+Type\+: 0\+: For Error of the invalid date 1\+: Positive case that date is valid 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_validation_8c_aad0e0d513f76295005bffda6a837e8ca_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_validation_8c_a3e57c2d1f87f4fa6f70006cb340430d8}\label{_validation_8c_a3e57c2d1f87f4fa6f70006cb340430d8}} 
+\index{Validation.c@{Validation.c}!conn9@{conn9}}
+\index{conn9@{conn9}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{conn9}{conn9}}
+{\footnotesize\ttfamily M\+Y\+S\+QL$\ast$ conn9}
+
+\mbox{\Hypertarget{_validation_8c_a0601a7762b64707223d00988c6ac781f}\label{_validation_8c_a0601a7762b64707223d00988c6ac781f}} 
+\index{Validation.c@{Validation.c}!port9@{port9}}
+\index{port9@{port9}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{port9}{port9}}
+{\footnotesize\ttfamily int port9 =3306}
+
+\mbox{\Hypertarget{_validation_8c_a5cc3ea59fa1a54853f37025dcf53f83d}\label{_validation_8c_a5cc3ea59fa1a54853f37025dcf53f83d}} 
+\index{Validation.c@{Validation.c}!query@{query}}
+\index{query@{query}!Validation.c@{Validation.c}}
+\doxysubsubsection{\texorpdfstring{query}{query}}
+{\footnotesize\ttfamily char query\mbox{[}1500\mbox{]}}
+
